@@ -1,0 +1,35 @@
+---
+layout: project
+title:  "A Covid-19 Risk Map for Massachusetts"
+subtitle: "Use GIS to predict risk factors in transmission, healthcare scacity, exposure, and susceptibility"
+keywords: "Covid-19, GIS, Spatial Analysis, Risk Analysis"
+instructor: "Glenn Hazelton"
+heroimage: "covid-map/hero-image.jpg"
+
+---
+
+<!--begin flow-->
+<div class="flow">
+<!--begin flow containers-->
+<div class="flow-full project-title">
+	<h1 class="title">{{page.title}}</h1>
+	<h2 class="subtitle">{{page.subtitle}}</h2>
+</div>
+<div class="flow-half project-description">
+	<p>As the Covid-19 spread over the world, there has been an urgent need for governments to allocate public resources across states. To reasonably distribute healthcare resources, planners should classify areas that need medical supports by how severe the pandamic is in that area. Therefore, this project aims to use Massachusetts as a study area to explore different factors that represent the severity, including the transmission risk, healthcare scarcity risk, exposure risk, and the susceptible risk. This project is inspired by an ArcGIS blogger  who maps the Covid-19 risk in Hongkong. Most of the analysis procedure is followed by that tutorial, nonetheless, since dataset is totally different, different analysis methods are used.</p>
+  <p> The transmission risk represents how easily the pandemic spread spatially. Since the flu is infected from person to person, human mobility is one of the main factors that spread the disease. The previous tutorial used the road network to calculate the spatial interaction of the study area. The longer the driving distances, the less spatial relationship between the start and the destination. Due to the limited time and efforts of computing the road network, I used a simpler way to generate the spatial network file. I only considered edges and nodes of the street file and set movement options as walking.</p>
+  <p>For the exposure risk, the previous tutorial used relative exposure distance between a randomly selected road intersection to the population center point. However, the geographic units of US data are larger than the Hongkong constitution, and most of the territory is non-residential area. In a larger polygon, if cases are snapped to the edge of the polygon or non-residential area, the situations generate outliners or fault locations for calculation. Therefore, I decided to snap the case data to the population center of each city and town without calculating the randomly distributed distances but use kernel density to generate the heatmap. For the susceptibility risk, I followed the tutorial to calculate the population density and population over 65 age who are susceptible to the pandemic. For the healthcare scarcity risk, I combined the hospital and nursing data in Massachusetts. Based on the numbers, location, and beds capacity, I generated the index of healthcare capacity. </p>
+  <p>Finally, I used multivariate clustering to cluster groups for four risk factors. Based on the clustered group, we are allowed to find the most serious areas and plan the resources allocation more efficiently. However, considering the analysis, there are still lots of limitations, details are elaborated in my ArcGIS blog.</p>
+</div>
+<div class="flow-half project-meta">
+	<!--project meta data-->
+	{% include projectdata.html %}
+  <a href="https://storymaps.arcgis.com/stories/536d6e898bc64edcbdc26e10849ea06b">
+    <img src="{{ site.baseurl }}/assets/images/covid-map/hero-image.jpg" alt="covid-map">
+  </a>
+  <figcaption>Covid-risk Level of Boston</figcaption>
+  <img src="{{ site.baseurl }}/assets/images/covid-map/Data Processing Flow.png" alt="processing data">
+  <figcaption>The Flow of Data Processing</figcaption>
+  <p><i class="far fa-hand-point-right"></i> <a href="https://storymaps.arcgis.com/stories/536d6e898bc64edcbdc26e10849ea06b">Click to view the storymap that I posted on the ArcGIS</a></p>
+  <p><i class="far fa-hand-point-right"></i> <a href="https://storymaps.arcgis.com/stories/4a38c9e3c7bf4b8eafac7d4f17688711">Click to view the original blog written by Lauren S Griffin</a></p>
+</div>

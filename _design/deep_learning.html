@@ -1,0 +1,58 @@
+---
+layout: project
+title: "Design Tools for AI"
+subtitle: "Empower Deep Learning by UX Design"
+keywords: "Design for AI, UX, Deep Learning, Design Patterns"
+client: "Seetatech"
+roles: "User Researcher, Interaction Designer"
+client: "Seetatech"
+heroimage: "deep_learning/hero-image.png"
+
+---
+
+<!--begin flow-->
+<div class="flow">
+<!--begin flow containers-->
+<div class="flow-full project-title">
+	<h1 class="title">{{page.title}}</h1>
+	<h2 class="subtitle">{{page.subtitle}}</h2>
+</div>
+<div class="flow-half project-description">
+	<p>When I worked as a freelance designer, I cooperated with <a href="https://www.seetatech.com/index_e.html">Seetatech</a>, an AI start-up in China, to build a deep learning platform for business use ranging from industrial face recognition, self-service retail, and intelligent animal farming. The application now has being used by Ping’ An Insurance company and <a href="https://www.ksyun.com/nv/product/KDL.html">Kingsoft Deep Learning</a>. Here, I would like to summarize some design insights and ideas when I built those deep learning products from a user-centered perspective. Design details are not expanded here due to confidential agreements and related regulations. </p>
+</div>
+<div class="flow-half project-meta">
+	<!--project meta data-->
+	{% include projectdata.html %}
+</div>
+
+<div class="flow-full">
+	<h2>Design AI for business use versus personal use</h2>
+</div>
+
+<div class="flow-half">
+	<p>It is interesting to find that there are different usage scenarios of AI when it comes to business users versus personal users. For business users, the most important things of applying AI is to “get job done”. For example, when it comes to predict the health condition of cows’ growth based on their morphological features, practitioners focus on completing the predictions from their mass data base in an effective way. Based on our research, the user flow of business practitioner simply as the following steps: upload the data, label the data, select the model, and used the model to train the dataset. Therefore, to ease the training process, designers need to create functions and web interactions that are simple enough for batch operations. Additionally, designers need to create seamless service that connect the operation of labeling data to training data. As most business practitioners are not identically AI developers, designers need to decode codes into graphic interface to make the processes of AI training easy to understand.</p>
+	<p>Different from business users, most personal users are AI developers. And most of their work are find-tuning models and exploring the usages of models in different occasions. Although most python IDE and notebook applications have provided rich coding environment for developers, it is still difficult for developers to reproduce models from others during their learning processes. Therefore, we designed functions and templates that standardize the training processes and parameters tuning for developers to quickly adopt new models from conferences and papers. Additionally, we also integrated different evaluation metrics within the graphic interface dashboard to show the modeling results.</p>
+	<p>Finally, we designed two deep learning platforms for both users: SeeTaaS and AutoDL. SeeTaaS is an industrial level platform which integrated data management, built-in algorithms with hyper-parameter tuning, and computation power for enterprise AI application. AutoDL is a model training platform that provides popular deep learning dataset and algorithms for AI developers to customize model training for customized applications. Accompanied with these two deep learning platforms, I also designed a data labeling website and a data Kanban.</p>
+</div>
+
+<div class="flow-half"">
+
+	<img src="{{ site.baseurl }}/assets/images/deep_learning/Wireframing.png" alt="wireframe">
+	<figcaption>Figure 1. Wireframing the process of deep learning</figcaption>
+
+	<img src="{{ site.baseurl }}/assets/images/deep_learning/model_training.png" alt="interaction flows">
+	<figcaption>Figure 2. Part of the interactions flows of model training in graphic interface</figcaption>
+
+	<img src="{{ site.baseurl }}/assets/images/deep_learning/content_layout_Kanban.jpg" alt="content layout of Kanban">
+	<figcaption>Figure 3. Content layout of the Data Kanban</figcaption>
+</div>
+
+<div class="flow-full">
+	<h2>Integrate AI components with design patterns</h2>
+	<p>Although Deep learning is full of knowledge in the areas of computer science and data processing, design patterns help to physicalize the process of deep learning and make it friendly to use when it comes to people who are not familiar with the algorithms and model evaluations. In consumer markets, AI is more like a tool rather than research subject. Therefore, when deep learning is designed in graphic interface for use, there are opportunities to modularize data managements, modal training, testing, and parameters fine-turning with design components, widgets, modals, and flows.</p>
+	<div class="videoWrapper">
+		<iframe src="{{ site.baseurl }}/assets/images/deep_learning/Prototypes.mp4" width="960" height="540" frameborder="0" allowfullscreen></iframe>
+	</div>
+	<br>
+	<figcaption>A previous version prototype of AutoDL</figcaption>
+</div>

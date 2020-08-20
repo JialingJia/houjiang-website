@@ -1,0 +1,58 @@
+<!--begin projectdata include-->
+<table class="meta">
+{% if page.designer != nil %}
+	<tr>
+		<th>Designer</th>
+		<td>{{ page.designer }}</td>
+	</tr>
+{% endif %}
+{% if page.keywords != nil %}
+	<tr>
+		<th>Keywords</th>
+		<td>{{ page.keywords }}</td>
+	</tr>
+{% endif %}
+{% if page.advisor != nil %}
+	<tr>
+		<th>Advisor</th>
+		<td>{{ page.advisor }}</td>
+	</tr>
+{% endif %}
+{% if page.instructor != nil %}
+	<tr>
+		<th>Instructor</th>
+		<td>{{ page.instructor }}</td>
+	</tr>
+{% endif %}
+{% if page.members != nil %}
+	<tr>
+		<th>Members</th>
+		<td>{{ page.members }}</td>
+	</tr>
+{% endif %}
+{% if page.acknowledgements != nil %}
+	<tr>
+		<th>Acknowledgements</th>
+		<td>{{ page.acknowledgements }}</td>
+	</tr>
+{% endif %}
+{% if page.client != nil %}
+	<tr>
+		<th>Client</th>
+		<td>{{ page.client }}</td>
+	</tr>
+{% endif %}
+{% if page.roles != nil %}
+	<tr>
+		<th>Role</th>
+		<td>{{ page.roles }}</td>
+	</tr>
+{% endif %}
+{% if page.extlinktitle != nil and page.extlinkurl != nil %}
+	<tr>
+		<th>More Info</th>
+		<td><a href="{{ page.extlinkurl }}">{{ page.extlinktitle }}</a></td>
+	</tr>
+{% endif %}
+</table>
+<!--end projectdata include-->
