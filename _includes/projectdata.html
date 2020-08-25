@@ -42,6 +42,12 @@
 		<td>{{ page.client }}</td>
 	</tr>
 {% endif %}
+{% if page.partnership != nil %}
+	<tr>
+		<th>Partnership</th>
+		<td>{{ page.partnership }}</td>
+	</tr>
+{% endif %}
 {% if page.roles != nil %}
 	<tr>
 		<th>Role</th>
