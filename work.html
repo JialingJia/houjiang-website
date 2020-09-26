@@ -1,0 +1,70 @@
+---
+layout: default
+---
+
+<!--research list-->
+<section class="research" style="margin: 4em 0;">
+	<div class="container">
+		<h1>Design & Research</h1>
+		<div class="flow project-list">
+		{% for project in site.design %}
+			<a class="flow-project" href="{{ site.baseurl }}{{ project.url }}.html">
+				<div class="project-body">
+	         <img src="{{ site.baseurl }}/assets/images/{{ project.heroimage }}" alt="">
+					<div class="project-title">
+						<h2>{{ project.title }}<h2>
+						<h3>{{ project.subtitle }}</h3>
+					</div>
+				</div>
+			</a>
+		{% endfor %}
+		{% for project in site.research %}
+			<a class="flow-project" href="{{ site.baseurl }}{{ project.url }}.html">
+				<div class="project-body">
+          <img src="{{ site.baseurl }}/assets/images/{{ project.heroimage }}" alt="">
+					<div class="project-title">
+						<h2>{{ project.title }}<h2>
+						<h3>{{ project.subtitle }}</h3>
+					</div>
+				</div>
+			</a>
+		{% endfor %}
+	</div>
+	</div>
+
+	<!--poster list-->
+	<div class="container">
+		<h1>Posters</h1>
+		<div class="flow project-list">
+		{% for project in site.posters %}
+			<a class="flow-project" href="{{ site.baseurl }}{{ project.url }}.html">
+				<div class="project-body">
+          <img src="{{ site.baseurl }}/assets/images/{{ project.heroimage }}" alt="">
+					<div class="poster-title">
+						<!-- <h3>{{ project.title }}<h3> -->
+					</div>
+				</div>
+			</a>
+		{% endfor %}
+	</div>
+</section>
+
+<!--design list-->
+<!-- <section class="design" style="margin: 4em 0;">
+	<div class="container">
+		<h1>Design</h1>
+		<div class="flow project-list">
+		{% for project in site.design %}
+			<a class="flow-project" href="{{ site.baseurl }}{{ project.url }}.html">
+				<div class="project-body">
+          <img src="{{ site.baseurl }}/assets/images/{{ project.heroimage }}" alt="">
+					<div class="project-title">
+						<h2>{{ project.title }}<h2>
+						<h3>{{ project.subtitle }}</h3>
+					</div>
+				</div>
+			</a>
+		{% endfor %}
+	</div>
+	</div>
+</section> -->
