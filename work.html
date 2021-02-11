@@ -5,30 +5,44 @@ layout: default
 <!--research list-->
 <section class="research">
 	<div class="container">
-		<h1>Design & Research</h1>
+		<h1>Design</h1>
 		<div class="flow project-list">
-			{% for project in site.design %}
+			{% assign sortedPosts = site.design | sort: 'year' | reverse%}
+			{% for project in sortedPosts %}
 			<a class="flow-project" href="{{ site.baseurl }}{{ project.url }}.html">
 				<div class="project-body">
 					<img src="{{ site.baseurl }}/assets/images/{{ project.heroimage }}" alt="">
 					<div class="project-title">
-						<h2>{{ project.title }}
-						<h3>{{ project.subtitle }}</h3>
+						<h2>{{ project.title }}</h2>
+							<h3>{{ project.subtitle }}</h3>
 					</div>
 				</div>
 			</a>
 			{% endfor %}
-			{% for project in site.research %}
+		</div>
+		<h1>Research</h1>
+		<div class="flow project-list">
+			{% assign sortedPosts = site.research | sort: 'year' | reverse%}
+			{% for project in sortedPosts %}
 			<a class="flow-project" href="{{ site.baseurl }}{{ project.url }}.html">
 				<div class="project-body">
 					<img src="{{ site.baseurl }}/assets/images/{{ project.heroimage }}" alt="">
 					<div class="project-title">
-						<h2>{{ project.title }}
-						<h3>{{ project.subtitle }}</h3>
+						<h2>{{ project.title }}</h2>
+							<h3>{{ project.subtitle }}</h3>
 					</div>
 				</div>
 			</a>
 			{% endfor %}
+			<a class="flow-project" target="_blank" href="https://sonification.design/">
+				<div class="project-body">
+					<img src="{{ site.baseurl }}/assets/images/sonification.jpg" alt="">
+					<div class="project-title">
+						<h2>Data Sonification Archive</h2>
+						<h3>Explore the potential of sound in complementing representation and broadening the publics of data</h3>
+					</div>
+				</div>
+			</a>
 		</div>
 	</div>
 

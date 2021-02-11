@@ -1,0 +1,47 @@
+---
+layout: project
+title:  "Visualizing Covidcookery"
+subtitle: "What are people eating during lockdown?"
+keywords: "Covid-19, Cookery, NLP, D3"
+instructor: "Paolo Ciuccarelli"
+members: "Yuan Hua, Houjiang Liu"
+heroimage: "covid_cook/hero-image.jpg"
+year: "2020"
+
+---
+
+<!--begin flow-->
+<div class="flow">
+<!--begin flow containers-->
+<div class="flow-full project-title">
+	<h1 class="title">{{page.title}}</h1>
+	<h2 class="subtitle">{{page.subtitle}}</h2>
+</div>
+<div class="flow-half project-description">
+	<p> Home-cooking has become as a way to pass hours and feel productive, a form to entertain ourselves, and even an outlet to channel all the anxieties. Sharing food, as well as sharing food experiences can help create a new sense of community while people are isolated.</p>
+  <p>By displaying hundreds of posts/images of home-cooking food that people share on a Reddit community <a href="https://www.reddit.com/r/covidcookery/">Covidcookery</a>, we hope users can discover some fun from seeing what people are eating and how people treat food/cooking in their life during the pandemic. Moreover, to think about how the reality changes people’s diets and how sharing food has changed/enriched our life.</p>
+	<p><i class="far fa-hand-point-right"></i> <a href="https://huayuan0205.github.io/covidcookery/">Click to view the project</a></p>
+</div>
+<div class="flow-half project-meta">
+	<!--project meta data-->
+	{% include projectdata.html %}
+  <a target="_blank" href="https://huayuan0205.github.io/covidcookery/">
+    <img src="{{ site.baseurl }}/assets/images/covid_cook/hero-image.jpg" alt="covid-cook">
+  </a>
+  <figcaption>Visualizing Covidcookery</figcaption>
+</div>
+
+<div class="flow-full">
+	<h3>Data Processing and Visualization</h3>
+</div>
+
+<div class="flow-half">
+	<p>To process our data, we firstly used Google Script to extract all post titles, images, and other metadata from the subreddit ranging from the subreddit's opening date to November 24 (<a href="https://docs.google.com/spreadsheets/d/1tT2lcPHudHsnlxRM84M2LZan4QMOJdxYFI_KhOy59W0/edit?usp=sharing">data</a>). Second, we used features of Spacy, including lemmatization and name recognition to identify all food names based on similarity of a number of food corpus that we collected from the web. After filtering keywords' similarity over 0.9, we also did several rounds of manual cleaning to ensure its accuracy.</p>
+	<p>To visualize our data, we firstly converted our dataset into a network file by connnecting different dishes with the same food ingredients. Second, we aggregated times of food ingredients that have been used daily to perform the racing bar chart.</p>
+	<p>Finally, our visualization contains two sections, one force-directed graph of cooking dishes and ingredients and a racing bar chart showing the summary of top 20 food ingredients.</p>
+</div>
+
+<div class="flow-half">
+	<img src="{{ site.baseurl }}/assets/images/covid_cook/flow.jpg" alt="flow">
+	<figcaption>Figure 1. Data Protocols</figcaption>
+</div>
