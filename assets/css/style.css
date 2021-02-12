@@ -25,6 +25,7 @@ body {
 
 .nav {
   /* box-shadow: 0 2px 5px -2px */
+  text-align: center;
   padding-top: 1rem;
   color: #000000;
 }
@@ -58,11 +59,11 @@ body {
   .flow > [class*="flow"] {
   	position: relative;
   	padding: 0.7em 1.5em;
-  	width: 50%;
+  	width: 100%;
   }
 }
 
-@media only screen and (min-width: 1210px) {
+@media only screen and (min-width: 1000px) {
 	.flow > [class*="flow"] {
 		padding: 0.7em 1.5em;
     width: 33.3%;
@@ -117,16 +118,19 @@ body {
 h1 {
 	font-weight: bold;
 	line-height: 1.2em;
+  text-align: center;
 }
 
 h2 {
 	margin-bottom: 3rem;
 	line-height: 1.1em;
+  text-align: left;
 }
 
 h3 {
 	margin-bottom: 1.5rem;
 	line-height: 1em;
+  text-align: left;
 }
 
 h4 {
@@ -135,13 +139,15 @@ h4 {
 
 h1.title {
 	font-weight: bold;
-	line-height: 1.125em;
+	line-height: 1.2em;
+  text-align: left;
 }
 
 h2.subtitle {
-	margin-bottom: 2rem;
+	/* margin-bottom: 2rem; */
 	font-weight: normal;
 	line-height: 1.1em;
+  text-align: left;
 }
 
 p {
