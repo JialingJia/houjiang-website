@@ -7,15 +7,6 @@ layout: default
 	<div class="container">
 		<h1>Design</h1>
 		<div class="flow project-list">
-			<a class="flow-project" target="_blank" href="{{ site.baseurl }}/assets/images/anonymized_03_01.pdf">
-				<div class="project-body">
-					<img src="{{ site.baseurl }}/assets/images/knowledge_network.jpg" alt="">
-					<div class="project-title">
-						<h2>DataViz for E-learning</h2>
-						<h3>Visualizing Knowledge Network for Orgainizations</h3>
-					</div>
-				</div>
-			</a>
 			{% assign sortedPosts = site.design | sort: 'year' | reverse%}
 			{% for project in sortedPosts %}
 			<a class="flow-project" href="{{ site.baseurl }}{{ project.url }}.html">
