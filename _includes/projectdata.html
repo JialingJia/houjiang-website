@@ -54,6 +54,12 @@
 		<td>{{ page.roles }}</td>
 	</tr>
 {% endif %}
+{% if page.year != nil %}
+	<tr>
+		<th>Year</th>
+		<td>{{ page.year }}</td>
+	</tr>
+{% endif %}
 {% if page.extlinktitle != nil and page.extlinkurl != nil %}
 	<tr>
 		<th>More Info</th>
