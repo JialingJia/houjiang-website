@@ -20,7 +20,10 @@ body {
 
 a.icon {
 	/* font-size: small; */
-  margin-right: 0.7rem;
+	font-size: 1.4em; 
+	/* text-align: center;  */
+	/* width: 100%; */
+  margin-right: 0.5rem;
 }
 /*navbar-----------------------*/
 
@@ -32,7 +35,7 @@ a.icon {
 }
 
 .nav-item{
-  /* padding-right: 1rem; */
+  padding-right: 1rem;
 }
 
 .nav-item:hover{
