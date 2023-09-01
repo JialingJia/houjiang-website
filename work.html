@@ -4,24 +4,28 @@ layout: default
 
 <!--research list-->
 <section class="research">
+
 	<div class="container">
-		<h1>Design</h1>
+		<h1>Active Research</h1>
 		<div class="flow project-list">
-			{% assign sortedPosts = site.design | sort: 'year' | reverse%}
-			{% for project in sortedPosts %}
-			<a class="flow-project" href="{{ site.baseurl }}{{ project.url }}.html">
+			<a class="flow-project">
+				<p>coming soon...</p>
+			</a>
+		</div>
+	</div>
+
+	<div class="container">
+		<h1>Archived Projects</h1>
+		<div class="flow project-list">
+			<a class="flow-project" target="_blank" href="https://designforemergency.org/">
 				<div class="project-body">
-					<img src="{{ site.baseurl }}/assets/images/{{ project.heroimage }}" alt="">
+					<img src="{{ site.baseurl }}/assets/images/designforemergency.jpg" alt="">
 					<div class="project-title">
-						<h2>{{ project.title }}</h2>
-						<h3>{{ project.subtitle }}</h3>
+						<h2>Design for Emergency</h2>
+						<h3>An Open Design Platform to Face Emerging Issues</h3>
 					</div>
 				</div>
 			</a>
-			{% endfor %}
-		</div>
-		<h1>Research</h1>
-		<div class="flow project-list">
 			<a class="flow-project" target="_blank" href="https://sonification.design/">
 				<div class="project-body">
 					<img src="{{ site.baseurl }}/assets/images/sonification.jpg" alt="">
@@ -32,24 +36,22 @@ layout: default
 					</div>
 				</div>
 			</a>
-			<a class="flow-project" target="_blank" href="https://designforemergency.org/">
-				<div class="project-body">
-					<img src="{{ site.baseurl }}/assets/images/designforemergency.jpg" alt="">
-					<div class="project-title">
-						<h2>Design for Emergency</h2>
-						<h3>An Open Design Platform to Face Emerging Issues</h3>
-					</div>
-				</div>
-			</a>
-			{% assign sortedPosts = site.research | sort: 'year' | reverse%}
+			{% assign sortedPosts = site.design | sort: 'year' | reverse%}
 			{% for project in sortedPosts %}
 			<a class="flow-project" href="{{ site.baseurl }}{{ project.url }}.html">
 				<div class="project-body">
 					<img src="{{ site.baseurl }}/assets/images/{{ project.heroimage }}" alt="">
+					{% if project.type == "project" %}
+						<div class="project-title">
+							<h2>{{ project.title }}</h2>
+							<h3>{{ project.subtitle }}</h3>
+						</div>
+					{% endif %}
+					{% if project.type == "poster" %}
 					<div class="project-title">
-						<h2>{{ project.title }}</h2>
-						<h3>{{ project.subtitle }}</h3>
+						<h3>{{ project.title }}</h3>
 					</div>
+				{% endif %}
 				</div>
 			</a>
 			{% endfor %}
@@ -57,7 +59,7 @@ layout: default
 	</div>
 
 	<!--poster list-->
-	<div class="container">
+	<!-- <div class="container">
 		<h1>Posters</h1>
 		<div class="flow project-list">
 			{% for project in site.posters %}
@@ -65,30 +67,9 @@ layout: default
 				<div class="project-body">
 					<img src="{{ site.baseurl }}/assets/images/{{ project.heroimage }}" alt="">
 					<div class="poster-title">
-						<!-- <h3>{{ project.title }}<h3> -->
 					</div>
 				</div>
 			</a>
 			{% endfor %}
-		</div>
+	</div> -->
 </section>
-
-<!--design list-->
-<!-- <section class="design" style="margin: 4em 0;">
-	<div class="container">
-		<h1>Design</h1>
-		<div class="flow project-list">
-		{% for project in site.design %}
-			<a class="flow-project" href="{{ site.baseurl }}{{ project.url }}.html">
-				<div class="project-body">
-          <img src="{{ site.baseurl }}/assets/images/{{ project.heroimage }}" alt="">
-					<div class="project-title">
-						<h2>{{ project.title }}<h2>
-						<h3>{{ project.subtitle }}</h3>
-					</div>
-				</div>
-			</a>
-		{% endfor %}
-	</div>
-	</div>
-</section> -->
