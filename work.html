@@ -38,6 +38,7 @@ layout: default
 			</a>
 			{% assign sortedPosts = site.design | sort: 'year' | reverse%}
 			{% for project in sortedPosts %}
+			{% if project.status == "active" %}
 			<a class="flow-project" href="{{ site.baseurl }}{{ project.url }}.html">
 				<div class="project-body">
 					<img src="{{ site.baseurl }}/assets/images/{{ project.heroimage }}" alt="">
@@ -54,6 +55,7 @@ layout: default
 				{% endif %}
 				</div>
 			</a>
+			{% endif %}
 			{% endfor %}
 		</div>
 	</div>
