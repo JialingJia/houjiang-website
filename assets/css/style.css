@@ -229,6 +229,8 @@ img text {
 
 .videoWrapper {
     position: relative;
+    width: 960px;
+    height: 540px;
     /* 16:9 */
 }
 
