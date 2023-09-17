@@ -29,9 +29,10 @@ a.icon {
 /*navbar-----------------------*/
 
 .nav {
-    /* box-shadow: 0 2px 5px -2px */
+    box-shadow: 0 0.5px 0 0 #8a8a8a;
     text-align: center;
     padding-top: 1rem;
+    padding-bottom: 1rem;
     color: #000000;
 }
 
@@ -48,6 +49,11 @@ a.icon {
 }
 
 /* project---------------------*/
+
+.personal_photo {
+    width: 95%; 
+    border-radius: 50%;
+}
 
 .flow {
     margin: 0 auto;
@@ -144,6 +150,10 @@ h1 {
     font-weight: bold;
     line-height: 1.2em;
     text-align: left;
+}
+
+.research {
+    padding-top: 3rem;
 }
 
 .research h1 {
