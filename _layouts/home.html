@@ -6,30 +6,48 @@
 	<div class="flow">
 		<div class="flow-three">
 			<img class="personal_photo"  src="{{ site.baseurl }}/assets/images/houji_cat.jpg" alt="personal photo">
-		</div>
-		<div class="flow-three-one">
-			<p>你好, my name is Houjiang Liu ("Whole ji oy LOU") ~ I am a doctoral student (starting from 2021), studying <b>HCI</b> and <b>Human-centered AI</b> at the School of Information, UT Austin.
-			
-			<p>Currently, I am advised by professor <b><a target="_blank" href="https://www.ischool.utexas.edu/~ml/">Matthew
-						Lease</a></b>, applying explainable NLP in tooling professional fact-checking to combat mis/disinformation. 
-						While most of my current research has to do with AI, I prefer seeing myself as a designer, framing AI applications with a humanistic perspective, such as fairness, autonomy, and dignity.
-						
-			<p>Previously, I was a design researcher at the <i><a target="_blank"
-					href="https://camd.northeastern.edu/center-for-design/">Center for Design</a></i> at the Northeastern University, working
-				with professor <b><a href="https://camd.northeastern.edu/faculty/miso-kim/">Miso Kim</a></i></b> on
-				designing services grounded in human autonomy and <b><a href="https://camd.northeastern.edu/faculty/paolo-ciuccarelli/">Paolo
-						Ciuccarelli</a></b> on visualizing interactive network graphs. I was also a part-time lecturer
-				teaching Interaction Design in CAMD at Northeastern.</p>
-
-			<p>Before starting my PhD at UT, I was a User Experience Designer, working at <i><a target="_blank" href="https://jelly.jd.com/">JD.com (Beijing)</a></i> and <i><a target="_blank" href="https://seetatech.com/">SeetaTech AI (Beijing)</a></i>. Want to chat more about projects or new opportunities? Feel free to contact me via:
-			liuhoujiang@hotmail.com.
-			</p>
 			<br>
-			<p>
+			<!-- <span style="display: block; text-align: center;">
 				<a class="icon" href="https://scholar.google.com/citations?user=a8xtohIAAAAJ&hl=en" target="_blank" title="Pulication"> <i class="ai ai-google-scholar ai-x"></i> </a>
 				<a class="icon" href="https://www.linkedin.com/in/liuhoujiang/" target="_blank" title="Linkedin"> <i class="fab fa-linkedin-in" style="font-size: 0.8em;"></i> </a>
-			</p>
+			</span> -->
 		</div>
+		<div class="flow-three-one">
+			<p>你好, my name is <b>Houjiang Liu</b> ("Whole ji oy LOU") ~ I am a doctoral student (2021 to present), studying HCI and Human-centered AI at the School of Information, UT Austin. 
+				Currently, I am advised by professor <a target="_blank" href="https://www.ischool.utexas.edu/~ml/">Matthew Lease</a>, applying NLP in tooling professional 
+				fact-checking to combat mis/disinformation. While most of my current research has to do with AI, I prefer seeing myself as a designer, framing AI applications 
+				based on a humanistic framework - human autonomy.
+						
+			<p>Previously, I was a design researcher at the <a target="_blank"
+					href="https://camd.northeastern.edu/center-for-design/">Center for Design</a> at the Northeastern University, working
+				with professor <a href="https://camd.northeastern.edu/faculty/miso-kim/">Miso Kim</a> on
+				designing services grounded in human autonomy and <a href="https://camd.northeastern.edu/faculty/paolo-ciuccarelli/">Paolo
+						Ciuccarelli</a> on visualizing interactive network graphs. I was also a part-time lecturer
+				teaching Interaction Design in CAMD at Northeastern. Before starting my PhD at UT, I was a User Experience Designer, working at <a target="_blank" href="https://jelly.jd.com/">JD.com (Beijing)</a> and <a target="_blank" href="https://seetatech.com/">SeetaTech AI (Beijing)</a>. </p>
+			
+</section>
+<section class="paper">
+	<div class="flow">
+		<div class="flow-three"></div>
+		<div class="flow-three-one">
+				<p><b>Publications</b> <a target="_blank" href="https://scholar.google.com/citations?user=a8xtohIAAAAJ&hl=en">(Google Scholar)</a></p>
+			<div class="publications">
+				{% bibliography --file papers%}
+			</div>
+			<br>
+		</div>
+</section>
+<section class="paper">
+		<div class="flow">
+			<div class="flow-three"></div>
+			<div class="flow-three-one">
+			<p><b>Others</b></p>
+			<p>For years, I have also been assisting my grandpa, a retired professor, in his lifelong work of editing Chinese dictionaries. Among his series of books, I helped co-edit the following work:</p>
+			<div class="publications">
+				{% bibliography --file books%}
+			</div>
+		</div>
+
 	</div>
 </section>
 

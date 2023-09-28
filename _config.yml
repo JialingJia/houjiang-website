@@ -64,3 +64,30 @@ collections:
   posters:
      output: true
      permalink: :collection/:name
+
+gems: ['jekyll/scholar']
+
+scholar:
+  style: _bibliography/mystyle.csl
+  locale: en
+
+  sort_by: year, month
+  order: descending
+
+  group_by: none
+  group_order: ascending
+
+  source: ./_bibliography
+  bibliography: publications.bib
+  bibliography_template: bib
+
+  replace_strings: true
+  join_strings:    true
+
+  use_raw_bibtex_entry: false
+
+  details_dir:    bibliography
+  details_layout: bibtex.html
+  details_link:   Details
+
+  query: "@*"

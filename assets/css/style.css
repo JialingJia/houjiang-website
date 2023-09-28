@@ -3,12 +3,39 @@
     padding: 1rem 0.5rem;
 }
 
-.section {
-    padding: 1.5rem 0.5rem;
-}
+/* .section {
+    padding: 0.5rem 0.5rem;
+} */
 
 .intro {
-    padding-top: 5rem;
+    padding-top: 3rem;
+    box-shadow: 0 0.5px 0 0 #c5c5c5;
+}
+
+.paper {
+    padding-top: 0.5rem;
+    box-shadow: 0 0.5px 0 0 #c5c5c5;
+}
+
+.intro, .paper, .footer p{
+    font-size: 15px;
+}
+
+.footer {
+    padding-top: 0.5rem;
+    padding-bottom: 0;
+}
+
+.publications{
+    font-size: 14px;
+}
+
+.intro p a{
+    text-decoration: underline;
+}
+
+.publications a{
+    text-decoration: underline;
 }
 
 body {
@@ -51,7 +78,9 @@ a.icon {
 /* project---------------------*/
 
 .personal_photo {
-    width: 95%; 
+    margin: auto;
+    display: block;
+    width: 80%; 
     border-radius: 50%;
 }
 
@@ -95,6 +124,15 @@ a.icon {
     .flow>.flow-three-one {
         width: 66.6%;
     }
+
+    .flow>.flow-four {
+        width: 25%;
+    }
+
+    .flow>.flow-four-one {
+        width: 75%;
+    }
+
 
     .flow>.flow-push {
         margin-left: 50%;
