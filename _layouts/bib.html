@@ -6,10 +6,10 @@
     {% endif %}
     {{reference}}
     {% if entry.doi %}
-        <a href="{{ entry.doi | prepend: 'http://doi.org/' }}">doi</a>
+        <a href="{{ entry.doi | prepend: 'https://doi.org/' }}">doi</a>
     {% endif %}
     {% if entry.arxivid %}
-        <a href="{{ entry.doi | prepend: 'http://http://arxiv.org/abs//' }}">arxiv</a>
+        <a href="{{ entry.arxivid | prepend: 'https://arxiv.org/abs/' }}">arxiv</a>
     {% endif %}
     {% if entry.pdf %}
         <a href="{{ entry.pdf }}">pdf</a>
