@@ -32,7 +32,10 @@
 		<div class="flow-three-one">
 				<p><b>Publications</b> <a target="_blank" href="https://scholar.google.com/citations?user=a8xtohIAAAAJ&hl=en">(Google Scholar)</a></p>
 			<div class="publications">
-				{% bibliography --file papers%}
+				{% for year in (2020...2023) reversed %}
+				<p><b>{{year}}</b></p>
+				{% bibliography --file papers --query @*[year={{year}}]* %}
+				{% endfor %}
 			</div>
 			<br>
 		</div>
