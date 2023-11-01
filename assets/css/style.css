@@ -27,7 +27,7 @@
 }
 
 .publications{
-    font-size: 14px;
+    font-size: 13.5px;
 }
 
 .intro p a{
@@ -80,7 +80,7 @@ a.icon {
 .personal_photo {
     margin: auto;
     display: block;
-    width: 80%; 
+    width: 60%; 
     border-radius: 50%;
 }
 
@@ -96,6 +96,13 @@ a.icon {
         position: relative;
         padding: 0.7em 1.2em;
         width: 100%;
+    }
+
+    .personal_photo {
+        margin: auto;
+        display: block;
+        width: 70%; 
+        border-radius: 50%;
     }
 }
 
@@ -141,6 +148,13 @@ a.icon {
 
     .flow>.flow-full {
         width: 100%;
+    }
+
+    .personal_photo {
+        margin: auto;
+        display: block;
+        width: 75%; 
+        border-radius: 50%;
     }
 }
 
