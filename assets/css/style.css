@@ -271,6 +271,7 @@ h2 {
 }
 
 h3 {
+    /* padding-bottom: 1.5rem; */
     line-height: 1em;
     text-align: left;
 }
