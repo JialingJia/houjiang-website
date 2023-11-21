@@ -271,7 +271,6 @@ h2 {
 }
 
 h3 {
-    margin-bottom: 1.5rem;
     line-height: 1em;
     text-align: left;
 }
@@ -306,7 +305,7 @@ figcaption,
 .caption {
     font-style: normal;
     margin-top: 0.3rem;
-    margin-bottom: 2rem;
+    margin-bottom: 0.8rem;
     font-size: 0.8rem;
     line-height: 1.333em;
     color: #666;
