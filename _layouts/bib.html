@@ -1,30 +1,30 @@
 ---
 ---
 <div>
-    {% if entry.note %}
-    [{{ entry.note }}]
-    {% endif %}
     {{reference}}
     {% if entry.doi %}
-        <a href="{{ entry.doi | prepend: 'https://doi.org/' }}">doi</a>
+        <a style="font-weight: 700; color: rgb(141, 141, 141);" href="{{ entry.doi | prepend: 'https://doi.org/' }}">doi</a>
     {% endif %}
     {% if entry.arxivid %}
-        <a href="{{ entry.arxivid | prepend: 'https://arxiv.org/abs/' }}">arxiv</a>
+        <a style="font-weight: 700; color: rgb(141, 141, 141);" href="{{ entry.arxivid | prepend: 'https://arxiv.org/abs/' }}">arxiv</a>
     {% endif %}
     {% if entry.pdf %}
-        <a href="{{ entry.pdf }}">pdf</a>
+        <a style="font-weight: 700; color: rgb(141, 141, 141);" href="{{ entry.pdf }}">pdf</a>
     {% endif %}
     {% if entry.code %}
-        <a href="{{ entry.code }}">code</a>
+        <a style="font-weight: 700; color: rgb(141, 141, 141);" href="{{ entry.code }}">code</a>
     {% endif %}
     {% if entry.preprint %}
-        <a href="{{ entry.preprint }}">preprint</a>
+        <a style="font-weight: 700; color: rgb(141, 141, 141);" href="{{ entry.preprint }}">preprint</a>
     {% endif %}
     {% if entry.design %}
-        <a href="{{ entry.design }}">design</a>
+        <a style="font-weight: 700; color: rgb(141, 141, 141);" href="{{ entry.design }}">design</a>
     {% endif %}
     {% if entry.slides %}
-        <a href="{{ entry.slides }}">slides</a>
+        <a style="font-weight: 700; color: rgb(141, 141, 141);" href="{{ entry.slides }}">slides</a>
+    {% endif %}
+    {% if entry.note %}
+    [{{ entry.note }}]
     {% endif %}
     <p></p>
 </div>
