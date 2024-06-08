@@ -8,8 +8,8 @@
 } */
 
 .intro {
-    padding-top: 3rem;
-    padding-bottom: 0.5rem;
+    padding-top: 2.5rem;
+    padding-bottom: 1rem;
     box-shadow: 0 0.5px 0 0 #c5c5c5;
 }
 
@@ -23,6 +23,7 @@
 }
 
 .footer {
+    position: relative;
     padding-top: 0.5rem;
     padding-bottom: 0;
 }
@@ -342,7 +343,7 @@ img text {
 .videoWrapper {
     position: relative;
     width: 960px;
-    height: 540px;
+    height: 100%;
     /* 16:9 */
 }
 
