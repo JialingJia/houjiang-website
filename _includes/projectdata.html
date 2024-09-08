@@ -20,7 +20,7 @@
 {% endif %}
 {% if page.instructor != nil %}
 	<tr>
-		<th>Instructor</th>
+		<th>Instructors</th>
 		<td>{{ page.instructor }}</td>
 	</tr>
 {% endif %}
@@ -30,10 +30,17 @@
 		<td>{{ page.members }}</td>
 	</tr>
 {% endif %}
-{% if page.acknowledgements != nil %}
+{% if page.lab != nil %}
 	<tr>
-		<th>Acknowledgements</th>
-		<td>{{ page.acknowledgements }}</td>
+		<th>Lab</th>
+		<!-- <td><a target="_blank" href="{{ page.laburl }}">{{ page.lab }}</a></td> -->
+		<td>{{ page.lab }}</td>
+	</tr>
+{% endif %}
+{% if page.grants != nil %}
+	<tr>
+		<th>Grants</th>
+		<td>{{ page.grants }}</td>
 	</tr>
 {% endif %}
 {% if page.client != nil %}

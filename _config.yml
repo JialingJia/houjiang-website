@@ -34,6 +34,7 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-tabs
+  # - custom_filters
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -59,10 +60,13 @@ collections:
   research:
      output: true
      permalink: :collection/:name
-  design:
+  archived:
      output: true
      permalink: :collection/:name
   posters:
+     output: true
+     permalink: :collection/:name
+  active:
      output: true
      permalink: :collection/:name
 
@@ -79,7 +83,7 @@ scholar:
   group_order: ascending
 
   source: ./_bibliography
-  bibliography: publications.bib
+  bibliography: references.bib
   bibliography_template: bib
 
   replace_strings: true

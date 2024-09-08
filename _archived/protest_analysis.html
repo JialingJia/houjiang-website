@@ -1,0 +1,36 @@
+---
+layout: project
+title:  "U.S. Protests for Racial Justice"
+subtitle: "Visualize the #BLM Protests in US and Analyze the Intensity by Machine Learning"
+type: "project"
+keywords: "George Floyd Protests, Black Lives Matter, Exploratory Data Analysis, Data Visualization, Machine Learning"
+instructor: "Tales Imbiriba"
+members: "Houjiang Liu, Kyle Skene, Yuan Hua"
+heroimage: "protests/hero-image.jpg"
+year: "2020"
+status: "archived"
+
+---
+
+<!--begin flow-->
+<div class="flow">
+<!--begin flow containers-->
+<div class="flow-full project-title">
+	<h1 class="title">{{page.title}}</h1>
+	<h2 class="subtitle">{{page.subtitle}}</h2>
+</div>
+<div class="flow-half project-description">
+	<p>When George Floyd was killed under police arrested, large groups of people across states have gathered and started protesting as a response to the killing of George Floyd. The protests have spread nationwide from May to June. Although most of protests have been peaceful, there are other protests developing to riots and looting which damages urban social lives. It is reported by the New York Times that these protests might be the largest movement in U.S. history. To uncover the influence and intensity of a series of protests happened from May to June, we used exploratory data analysis to interpret facts about how the protests are distributed temporally and spatially, and what damages have been caused. To provide rich information about the data, we created an interactive web report for people to explore. Additionally, we also used demographic features to predict the protest intensity for each city.</p>
+  <p> Our main dataset is the #BLM protest data, which is downloaded from the Crowd Counting Consortium. We combine the #BLM protest data with U.S. cities and town dataset from the simplemap & GeoNames and the city demographic dataset from Kaggle. The #BLM dataset contains numerical data, including the location, date, estimated participants, and injuries on both sides (police and protestors). The other two datasets contain numerical data, including cities population, median income, poverty rate, and races rate.</p>
+  <p>In brief, we mainly use exploratory data analysis to describe the distribution of protests, arrests, property damage, and injuries, etc. Also, we use Stream-lit library to visualize those data by bar chart, line chart, and map with hover-over and interactive selection, which shows the distribution and changes of protests over time. Additionally, we also use geographic maps to show the distribution of all the protests. To predict the protest intensity for each city by its demographic features, we evaluated two classification models, including KNN and logistic regression and fined tuning the logistic regression model as the result.</p>
+</div>
+<div class="flow-half project-meta">
+	<!--project meta data-->
+	{% include projectdata.html %}
+  <a target="_blank" href="https://webappracialjustice.herokuapp.com/">
+    <img src="{{ site.baseurl }}/assets/images/protests/protest-distribution.jpg" alt="covid-map">
+  </a>
+  <figcaption>Protest Distribution from May 25 to Jun 28</figcaption>
+  <p><i class="far fa-hand-point-right"></i> <a target="_blank" href="https://webappracialjustice.herokuapp.com/">Click to view the data viz on Heroku</a></p>
+  <p><i class="far fa-hand-point-right"></i> <a target="_blank" href="https://1drv.ms/b/s!Ak55tr-1XMS7gsMDFH_oswoFPcjsYw?e=EuKFOV">Click to view the full report</a></p>
+</div>

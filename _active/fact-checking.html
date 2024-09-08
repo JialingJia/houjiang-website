@@ -1,0 +1,397 @@
+---
+layout: project
+title: "Human-centered NLP Fact-checking"
+subtitle: "Designing AI tools to assist human fact-checkers"
+type: "project"
+keywords: "Fact-checking, Natural language processing, Misinformation, Disinformation"
+instructor: "Matt Lease, Min Kyung Lee, Jacek Gwizdka"
+members: "Anubrata Das, Venelin Kovatchev, Alexander Boltz, Didi Zhou, Daisy Pinaroc"
+lab: "AI and Human-centered Computing Group"
+laburl: "https://ai.ischool.utexas.edu/"
+grants: UT Good Systems, NSF, Knight Foundation
+heroimage: "fact-checking/hero-image.jpg"
+year: "2022-2024"
+status: "active"
+
+---
+
+<!--begin flow-->
+<div class="flow">
+        <!--begin flow containers-->
+        <div class="flow-full project-title">
+                <h1 class="title">{{page.title}}</h1>
+                <h2 class="subtitle">{{page.subtitle}}</h2>
+        </div>
+        <div class="flow-half project-description">
+                <p>The massive scale of intentional disinformation and inadvertent misinformation threaten modern
+                        society. To combat this, journalists and fact-checkers perform a key societal function by
+                        debunking fake news, online rumors, and conspiracy. While such human fact-checking has proven to
+                        be effective in terms of various measures, fact-checking remains a largely manual affair today,
+                        limiting the scale of its effective reach and practical impact.
+                </p>
+                <p>As a part of the UT Good System
+                        project (<a target='_blank' style="font-size: smaller;"
+                                href="https://sites.google.com/view/ut-misinformation-ai/">Designing
+                                Responsible AI Technologies to Protect Information Integrity</a>), led by Prof. <a
+                                target='_blank' href="">Matt Lease</a>, I collaborated with different colleagues on
+                        designing
+                        human-centered AI tools to assist human fact-checkers to address this global challenge.</p>
+                <p><b>Publications & Presentations</b></p>
+                <figcaption>
+                        [Journal] Anubrata Das, <b> Houjiang Liu </b>, Venelin Kovatchev, and Matthew Lease. 2023.
+                        "The state of human-centered NLP technology for fact-checking." Information Processing &
+                        Management, 60(2):103219, 2023. &nbsp
+                        <i class="fa-solid fa-hand-point-right"></i> <a target="_blank"
+                                href="https://www.sciencedirect.com/science/article/abs/pii/S030645732200320X?via%3Dihub">Full
+                                Paper</a>
+                        <span>&nbsp</span>
+                        <i class="fa-solid fa-hand-point-right"></i> <a target="_blank"
+                                href="https://utexas.box.com/shared/static/zo5tm5d7qzngsrdn0wb1l496isrusxo6">Short
+                                paper</a>
+                        <br>
+                        <br>
+                        [Journal] <b>Houjiang Liu</b>†, Anubrata Das†, Alexander Boltz†, Didi Zhou, Daisy Pinaroc,
+                        Matthew Lease, and Min Kyung Lee. 2024.
+                        "Human-centered NLP Fact-checking: Co-Designing with Fact-checkers using Matchmaking for AI."
+                        Proceedings of the ACM on Human-computer Interaction, 8(CSCW2) :Article(423), 44 pages. &nbsp
+                        <i class="fa-solid fa-hand-point-right"></i> <a target="_blank"
+                                href="https://doi.org/10.1145/3686962">Paper</a>
+                        <span>&nbsp</span>
+                        <i class="fa-solid fa-hand-point-right"></i> <a target="_blank"
+                                href="https://arxiv.org/abs/2308.07213">Arxiv</a>
+                        <br>
+                        <br>
+                        <!-- [Preprint] <b>Houjiang Liu</b>, Jacek Gwizdka, Matthew Lease. 2024. "Exploring Multidimensional
+                        Checkworthiness: Designing AI-assisted Claim Prioritization for Human Fact-checkers"
+                        <i class="fa-solid fa-hand-point-right"></i> <a target="_blank" href="">Arxiv</a> -->
+                        <!-- <br>
+                        [Design] Mentor Trees &nbsp
+                        <i class="fa-solid fa-hand-point-right"></i> <a target="_blank"
+                                href="https://www.mentortrees.com/">Website</a> -->
+                </figcaption>
+        </div>
+        <div class="flow-half project-meta">
+                <!--project meta data-->
+                {% include projectdata.html %}
+                <img src="{{ site.baseurl }}/assets/images/fact-checking/hero-image.jpg" alt="shift_winds">
+                <!-- <figcaption>Mentor Trees for William James</figcaption> -->
+        </div>
+
+        <div class="flow-full">
+                <h3>The State of Automated Fact-checking</h3>
+        </div>
+
+        <div class="flow-half">
+                <p>Fact-checking practices exhibit some common patterns and workflows across different organizations. A
+                        standard fact-checking process includes five stages: (1) choosing claims to check, (2)
+                        contacting the speaker, (3) tracing false claims, (4) working with experts, and (5) writing the
+                        fact-check. A growing body of NLP research has sought to automate different aspects of
+                        fact-checking. To date, most attention has been directed toward (Figure 1) claim detection,
+                        checkworthiness, and prioritizaiton, evidence retrieval, veracity prediction, and
+                        fact-check explanations.</p>
+                <p>In the first <a target="_blank" href="https://doi.org/10.1016/j.ipm.2022.103219">study</a>, we review
+                        key aspects of NLP-based fact-checking: task formulation, dataset
+                        construction, modeling, and human-centered strategies, such as explainable models and
+                        human-in-the-loop approaches. We then review the efficacy of applying NLP-based fact-checking
+                        tools to assist human fact-checkers. As a result, we found that while there are lots of NLP
+                        techniques developed, not many of them have been successfully integrated into existing
+                        computational tools to assist human fact-checkers. </p>
+                <p>This might stem from
+                        insufficient alignment with fact-checker needs, practices, and values. In part, simplified
+                        problem formulations that permit full automation neglect important aspects of real-world
+                        fact-checking,
+                        which remains a highly complex process requiring subjective judgment and human
+                        knowledge to corroborate claims based on local contexts. This is the research subject to which
+                        we now turn. </p>
+        </div>
+        <div class="flow-half">
+                <img src="{{ site.baseurl }}/assets/images/fact-checking/automated fact-checking pipeline.svg"
+                        alt="fact-checking pipeline">
+                <figcaption>Figure 1. Automated Fact-checking Pipeline</figcaption>
+        </div>
+
+        <div class="flow-full">
+                <h3>Matchmaking NLP Capabilities with Human Fact-checking Workflow</h3>
+        </div>
+        <div class="flow-full">
+                <p>In the second <a target="_blank" href="https://doi.org/10.1145/3686962">study</a>, we seek to bridge
+                        the above gap by empowering stakeholders to brainstorm AI
+                        ideas that are both novel and feasible — fact-checkers and AI researchers have deeper-level
+                        conversations to explore appropriate design choices with a better adoption of existing AI
+                        techniques, so that these design ideas are practically useful for fact-checkers and more likely
+                        to be developed in the real world. In particular, we introduce <b>Matchmaking for AI</b>,
+                        extending Bly
+                        and Churchill’s <a target="_blank"
+                                href="https://dl-acm-org.ezproxy.lib.utexas.edu/doi/10.1145/296165.296174">Matchmaking
+                                concept</a> as an AI co-design process, which maps AI techniques to user
+                        activities wherein those techniques may have the most impact. </p>
+                <p>Matchmaking for AI seeks to create "<i>workable ideas</i>" that are both grounded in participant
+                        needs and values, as well as informed by their understanding of AI capabilities. To
+                        generate such outcomes, we tailor a three-step matchmaking process as follows.</p>
+                <div class="tabs">
+                        <ul style="margin-left: 0;">
+                                <li class="tablinks is-active">
+                                        <a href="javascript:void(0)" onclick="openTabs(event, 'Step1');">
+                                                <span class="icon is-small"><i class="fa-solid fa-circle-1"></i></span>
+                                                <span>Mapping Stakeholder Expertise and Needs</span>
+                                        </a>
+                                </li>
+                                <li class="tablinks">
+                                        <a href="javascript:void(0)" onclick="openTabs(event, 'Step2');">
+                                                <span class="icon is-small"><i class="fa-solid fa-circle-2"></i></span>
+                                                <span>Playing with AI Probes</span>
+                                        </a>
+                                </li>
+                                <li class="tablinks">
+                                        <a href="javascript:void(0)" onclick="openTabs(event, 'Step3');">
+                                                <span class="icon is-small"><i class="fa-solid fa-circle-3"></i></span>
+                                                <span>Brainstorming AI Design Elements</span>
+                                        </a>
+                                </li>
+                        </ul>
+                </div>
+                <div id="Step1" class="Steps" style="display:block">
+                        <figcaption style="width: 95%; max-width: fit-content; margin: 0 auto;">Fact-checkers and design
+                                facilitators map out fact-checking workflow and computational tools. While fact-checkers
+                                were thinking aloud, designers facilitated distilling important concepts and recorded
+                                them (i.e., yellow sticky notes) in the canvas, followed by asking fact-checkers to
+                                affirm, revise, or add new content (i.e., red sticky notes).</figcaption>
+                        <br>
+                        <img style="margin: 0 auto;"
+                                src="{{ site.baseurl }}/assets/images/fact-checking/CANVAS-specialties.png"
+                                alt="specialty canvas">
+                </div>
+
+                <div id="Step2" class="Steps" style="display:none">
+                </div>
+                <div id="VideoContainer" style="display:none">
+                        <figcaption style="width: 95%; max-width: fit-content; margin: 0 auto;">
+                                We created eight specific AI Probes, which map existing state-of-the-art NLP techniques
+                                to different fact-checking tasks. Fact-checkers and AI researchers discuss the
+                                existing relationship between NLP capabilities and user activities originated from the
+                                probes, as well as suggest novel relationships where NLP techniques could be repurposed
+                                for different applications than originally intended.
+                        </figcaption>
+                        <br>
+                        <div id="VideoContainer" style="display:none;"></div>
+                        <video width="100%" controls autoplay preload="auto" controlsList="nodownload"
+                                oncontextmenu="return false;">
+                                <source src="{{ site.baseurl }}/assets/images/fact-checking/AI-probes.mp4"
+                                        type="video/mp4" />
+                        </video>
+                </div>
+
+                <div id="Step3" class="Steps" style="display:none">
+                        <figcaption style="width: 95%; max-width: fit-content; margin: 0 auto;">Fact-checkers,
+                                designers, and AI researchers collaboratively brainstorm ideas
+                                by specifying different AI elements. First, while fact-checkers were thinking aloud,
+                                designers helped them map
+                                out different seed ideas (i.e., yellow sticky notes). Continually, fact-checkers
+                                distilled the final one (i.e., red sticky notes in the "AI ideas"). Later,
+                                AI researchers helped depict AI information (i.e., blue sticky notes in the "AI
+                                elements"). Meanwhile, fact-checkers provided concrete examples for AI elements.
+                                Finally, participants brainstormed "functions and form" and "human evaluation".
+                        </figcaption>
+                        <br>
+                        <img style="margin: 0 auto;"
+                                src="{{ site.baseurl }}/assets/images/fact-checking/CANVAS-ideas.png"
+                                alt="specialty canvas">
+                </div>
+        </div>
+        <div class="flow-full">
+                <br>
+                <p>Using Matchmaking for AI, we conducted co-design sessions with 22 professional fact-checkers,
+                        yielding 11 novel design ideas (to the best of our knowledge), as the table presented below.
+                        Compared to existing NLP fact-checking that focused on claim selection and verification, our
+                        ideas point to a broader set
+                        of challenges across the fact-checking workflow and fact-checker goals. This table
+                        describes the outcome of our co-design process. Additionally, we provide pointers to the
+                        literature related to the design ideas that can be used
+                        by developers as a starting point.</p>
+                <table class="table">
+                        <thead>
+                                <tr>
+                                        <th class="tg-mcqj">Fact-checking stages</th>
+                                        <th class="tg-mcqj">No.</th>
+                                        <th class="tg-mcqj">Design Ideas</th>
+                                        <th class="tg-mcqj">Related AI Research</th>
+                                </tr>
+                        </thead>
+                        <tbody>
+                                <tr>
+                                        <td class="tg-73oq">Forecasting claims</td>
+                                        <td class="tg-73oq">1</td>
+                                        <td class="tg-73oq">Forecasting Disinformation</td>
+                                        <td class="tg-73oq">
+                                                [<a target="_blank"
+                                                        href="https://doi.org/{% fetch_doi Huang2022-qh %}">1</a>, <a
+                                                        target="_blank"
+                                                        href="https://doi.org/{% fetch_doi Pan2023-me %}">2</a>]
+                                        </td>
+                                </tr>
+                                <tr>
+                                        <td class="tg-73oq" rowspan="2">Monitoring claims</td>
+                                        <td class="tg-73oq">2</td>
+                                        <td class="tg-73oq">Identifying Broader Disinformation Narratives</td>
+                                        <td class="tg-73oq">
+                                                [<a target="_blank"
+                                                        href="https://doi.org/{% fetch_doi Jiang2021-ef %}">3</a>,
+                                                <a target="_blank"
+                                                        href="https://doi.org/{% fetch_doi Hardalov2021-zm %}">4</a>,
+                                                <a target="_blank"
+                                                        href="https://doi.org/{% fetch_doi Arakelyan2023-ju %}">5</a>]
+                                        </td>
+                                </tr>
+                                <tr>
+                                        <td class="tg-73oq">3</td>
+                                        <td class="tg-73oq">Dynamic Credibility Monitoring of Social Media Users</td>
+                                        <td class="tg-73oq">
+                                                [<a target="_blank"
+                                                        href="https://doi.org/{% fetch_doi zhou2020survey %}">6</a>,
+                                                <a target="_blank"
+                                                        href="https://doi.org/{% fetch_doi Nguyen2018believeornot %}">7</a>,
+                                                <a target="_blank"
+                                                        href="https://doi.org/{% fetch_doi Giachanou2019-qf %}">8</a>,
+                                                <a target="_blank"
+                                                        href="https://doi.org/{% fetch_doi Zhi2017-wv %}">9</a>,
+                                                <a target="_blank"
+                                                        href="https://doi.org/{% fetch_doi Rashkin2017-ct %}">10</a>]
+                                        </td>
+                                </tr>
+                                <tr>
+                                        <td class="tg-73oq" rowspan="3">Selecting claims</td>
+                                        <td class="tg-73oq">4</td>
+                                        <td class="tg-73oq">Finding and Providing Context for Ambiguous Claims</td>
+                                        <td class="tg-73oq">
+                                                [<a target="_blank"
+                                                        href="https://doi.org/{% fetch_doi Choi2021-bm %}">11</a>,
+                                                <a target="_blank"
+                                                        href="https://doi.org/{% fetch_doi Chen2022-yz %}">12</a>]
+                                        </td>
+                                </tr>
+                                <tr>
+                                        <td class="tg-73oq">5</td>
+                                        <td class="tg-73oq">Personalized Claim Filtering and Selection</td>
+                                        <td class="tg-73oq">
+                                                [<a target="_blank"
+                                                        href="https://doi.org/{% fetch_doi alam2020fighting %}">13</a>,
+                                                <a target="_blank" href="{% fetch_doi Hassan2017TowardAF %}">14</a>,
+                                                <a target="_blank"
+                                                        href="https://doi.org/{% fetch_doi vasileva2019takes %}">15</a>,
+                                                <a target="_blank"
+                                                        href="https://doi.org/{% fetch_doi Nakov2022TheCC %}">16</a>,
+                                                <a target="_blank"
+                                                        href="https://doi.org/{% fetch_doi alam2021fighting %}">17</a>,
+                                                <a target="_blank"
+                                                        href="https://doi.org/{% fetch_doi Gupta2023-jx %}">18</a>,
+                                                <a target="_blank"
+                                                        href="https://doi.org/{% fetch_doi Kartal2020-hp %}">19</a>,
+                                                <a target="_blank"
+                                                        href="https://doi.org/{% fetch_doi Hardalov2021-zm %}">4</a>,
+                                                <a target="_blank"
+                                                        href="https://doi.org/{% fetch_doi Arakelyan2023-ju %}">5</a>]
+                                        </td>
+                                </tr>
+                                <tr>
+                                        <td class="tg-73oq">6</td>
+                                        <td class="tg-73oq">Personal Bias Warning System for Claim Selection</td>
+                                        <td class="tg-73oq">
+                                                [<a target="_blank"
+                                                        href="https://doi.org/{% fetch_doi Hardalov2021-zm %}">4</a>,
+                                                <a target="_blank"
+                                                        href="https://doi.org/{% fetch_doi Arakelyan2023-ju %}">5</a>]
+                                        </td>
+                                </tr>
+                                <tr>
+                                        <td class="tg-73oq" rowspan="2">Investigating facts</td>
+                                        <td class="tg-73oq">7</td>
+                                        <td class="tg-73oq">Human-AI Teaming for Fast Generation of Fact-check Briefs
+                                        </td>
+                                        <td class="tg-73oq">
+                                                [<a target="_blank"
+                                                        href="https://doi.org/{% fetch_doi Fan2020-sj %}">20</a>,
+                                                <a target="_blank"
+                                                        href="https://doi.org/{% fetch_doi Chen2022-yz %}">12</a>,
+                                                <a target="_blank"
+                                                        href="https://doi.org/{% fetch_doi Nguyen2020-we %}">21</a>,
+                                                <a target="_blank"
+                                                        href="https://doi.org/{% fetch_doi Chen2023-fu %}">22</a>]
+                                        </td>
+                                </tr>
+                                <tr>
+                                        <td class="tg-73oq">8</td>
+                                        <td class="tg-73oq">Identifying Official Databases and Formulating Queries for
+                                                Verifying Quantitative Claims</td>
+                                        <td class="tg-73oq">
+                                                [<a target="_blank"
+                                                        href="https://doi.org/{% fetch_doi Karagiannis2020ScrutinizerAM %}">23</a>,
+                                                <a target="_blank" href="{% fetch_doi Balalau2022-wu %}">24</a>]
+                                        </td>
+                                </tr>
+                                <tr>
+                                        <td class="tg-73oq" rowspan="3">Writing<br>fact-checks</td>
+                                        <td class="tg-73oq">9</td>
+                                        <td class="tg-73oq">Understanding Reader Engagement for Fact-checking Reports
+                                        </td>
+                                        <td class="tg-73oq">
+                                                [<a target="_blank"
+                                                        href="https://doi.org/{% fetch_doi Zhang2021-mh %}">25</a>]
+                                        </td>
+                                </tr>
+                                <tr>
+                                        <td class="tg-73oq">10</td>
+                                        <td class="tg-73oq">AI Assistance in Writing Fact-checking Reports</td>
+                                        <td class="tg-73oq">
+                                                [<a target="_blank"
+                                                        href="https://doi.org/{% fetch_doi Chen2023-fu %}">22</a>]
+                                        </td>
+                                </tr>
+                                <tr>
+                                        <td class="tg-73oq">11</td>
+                                        <td class="tg-73oq">AI Assistance in Critiquing and Editing Fact-checking
+                                                Reports</td>
+                                        <td class="tg-73oq">
+                                                [<a target="_blank"
+                                                        href="https://doi.org/{% fetch_doi Vo2019-mr %}">26</a>]
+                                        </td>
+                                </tr>
+                                <tr></tr>
+                        </tbody>
+                </table>
+        </div>
+        <div class="flow-full">
+                <h3>To be continued</h3>
+        </div>
+
+</div>
+
+<script>
+        function openTabs(evt, stepName) {
+                var i, x, tablinks, video;
+                x = document.getElementsByClassName("Steps");
+                video = document.querySelector("video");
+
+                for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";
+                        if (video) {
+                                video.pause(); // Pause the video when switching tabs
+                        }
+                }
+
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < x.length; i++) {
+                        tablinks[i].className = tablinks[i].className.replace(" is-active", "");
+                }
+
+                document.getElementById(stepName).style.display = "block";
+                evt.currentTarget.parentElement.className += " is-active";
+
+                var videoContainer = document.getElementById("VideoContainer");
+                if (stepName === "Step2") {
+                        videoContainer.style.display = "block";
+                } else {
+                        videoContainer.style.display = "none";
+                }
+        }
+
+</script>

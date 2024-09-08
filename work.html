@@ -8,7 +8,7 @@ layout: default
 	<div class="container">
 		<h1>Active Research</h1>
 		<div class="flow project-list">
-			<a class="flow-project">
+			<!-- <a class="flow-project">
 				<div class="project-body">
 					<img src="{{ site.baseurl }}/assets/images/fact-checking.jpg" alt="">
 					<div class="project-title">
@@ -16,7 +16,23 @@ layout: default
 						<h3>Designing AI tools to assist human fact-checkers</h3>
 					</div>
 				</div>
+			</a> -->
+			{% assign sortedPosts = site.active %}
+			{% for project in sortedPosts %}
+			{% if project.status == "active" %}
+			<a class="flow-project" href="{{ site.baseurl }}{{ project.url }}.html">
+				<div class="project-body">
+					<img src="{{ site.baseurl }}/assets/images/{{ project.heroimage }}" alt="">
+					{% if project.type == "project" %}
+						<div class="project-title">
+							<h2>{{ project.title }}</h2>
+							<h3>{{ project.subtitle }}</h3>
+						</div>
+					{% endif %}
+				</div>
 			</a>
+			{% endif %}
+			{% endfor %}
 		</div>
 	</div>
 
@@ -42,7 +58,7 @@ layout: default
 					</div>
 				</div>
 			</a>
-			{% assign sortedPosts = site.design | sort: 'year' | reverse%}
+			{% assign sortedPosts = site.archived | sort: 'year' | reverse%}
 			{% for project in sortedPosts %}
 			{% if project.status == "active" %}
 			<a class="flow-project" href="{{ site.baseurl }}{{ project.url }}.html">
@@ -58,7 +74,7 @@ layout: default
 					<div class="project-title">
 						<h3>{{ project.title }}</h3>
 					</div>
-				{% endif %}
+					{% endif %}
 				</div>
 			</a>
 			{% endif %}

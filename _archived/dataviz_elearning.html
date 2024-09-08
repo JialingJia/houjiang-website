@@ -1,0 +1,153 @@
+---
+layout: project
+title: "DataViz for E-learning"
+subtitle: "Visualizing Knowledge Network for Orgainizations"
+type: "project"
+keywords: "Knowledge Network, Data Simulation, D3"
+instructor: "Paolo Ciuccarelli"
+members: "Yuan Hua, Houjiang Liu"
+heroimage: "viz_elearning/knowledge_network.jpg"
+year: "2021"
+status: "active"
+
+---
+
+<!--begin flow-->
+<div class="flow">
+	<!--begin flow containers-->
+	<div class="flow-full project-title">
+		<h1 class="title">{{page.title}}</h1>
+		<h2 class="subtitle">{{page.subtitle}}</h2>
+	</div>
+	<div class="flow-half project-description">
+		<p> This project aimed to create a collection of data visualization for Intesa SanPaolo, the leading Italian
+			banking group, to explore the impacts of its training program on the growth of knowledge depth in the
+			corporate. Our team provided an interactive web application for our client as the final deliverable. We
+			first used Gephi to generate static network image, then put together all graphs in a user interface and
+			developed it using D3. The interactive prototype will be used for exploring the value of the current
+			training program and supporting the future development and
+			business plan.</p>
+		<p>In this application, users can explore the knowledge data within the company and customize the data displayed
+			through visualization. They can get an overview of data and dive into the data through interactions,
+			including scaling, filtering, linking, etc. We integrated the knowledge distribution and the position
+			hierarchy of the bank into the web application by combining two main views — the network view and the
+			hierarchy view — to display the data. The users can switch between two views easily and drill into segments
+			of interest through interactions.</p>
+		<p><b>Prototypes & Applications</b></p>
+		<figcaption>
+			<i class="fa-solid fa-hand-point-right"></i> <a target="_blank"
+				href="https://jialingjia.github.io/Viz_e_learning/D3_prototype.html">Interactive prototype</a> 
+			<span>&nbsp</span> 
+			<i class="fa-solid fa-hand-point-right"></i> <a target="_blank"
+				href="https://nu-center-for-design.github.io/DataViz_Elearning_phase-3/">Final application</a> 
+				<br>
+				<br>		
+				[Award] Information is Beautiful Awards 2022<a target="_blank" href="https://www.informationisbeautifulawards.com/showcase/5575-intesa-organizational-knowledge-map"> Longlist </a> 
+		</figcaption>
+	</div>
+	<div class="flow-half project-meta">
+		<!--project meta data-->
+		{% include projectdata.html %}
+		<a target="_blank" href="https://jialingjia.github.io/Viz_e_learning/D3_prototype.html">
+			<img src="{{ site.baseurl }}/assets/images/viz_elearning/knowledge_network.jpg" alt="knowledge_network">
+		</a>
+		<figcaption>Visualizing Knowledge Network</figcaption>
+	</div>
+
+	<div class="flow-full"><h3>Design Iteration</h3></div>
+	<div class="flow-full">
+		<p>In the beginning, we experimented with various visual forms to map the first set of data we received, such as
+			network, circle packing, flow chart, stacked bar chart, etc. The tools we used include Gephi, Raw Graph, and
+			Adobe Illustrator. After exchanging ideas in internal meetings and discussing our ideas with the client
+			along the process, we then narrowed down our focus to network mapping and contour maps to represent the
+			knowledge data and its corresponding attributes. Please view more visuals in the presentation file attached
+			in the Deliverables section.</p>
+		<img src="{{ site.baseurl }}/assets/images/viz_elearning/design_iteration.jpg" alt="flow">
+		<figcaption>Figure 1. A series of exploratory visualizations</figcaption>
+	</div>
+
+	<div class="flow-full">
+		<h3>Web Application</h3>
+	</div>
+	<div class="flow-half">
+		<p>To better help our client explore the knowledge data within the company and customize the data displayed
+			through visualization, we proposed designing an interactive web application as the final deliverable. In
+			this application, users can get an overview of data and dive into the data through interactions, including
+			scaling, filtering, linking, etc.We used Adobe Xd to present our interface design and create a clickable
+			prototype for simulation navigation
+			of the application.
+		</p>
+	</div>
+	<div class="flow-half">
+		<img src="{{ site.baseurl }}/assets/images/viz_elearning/wireflow.jpg" alt="flow">
+		<figcaption>Figure 2. User Wireflow</figcaption>
+	</div>
+
+	<div class="flow-full">
+		<h5>Knowledge Network</h5>
+	</div>
+	<div class="flow-half">
+		<p>The network graph shows different relations between knowledge areas and employees. It visualizes:</p>
+		<ol>
+			<li>The bigger the nodes the more employees that share this knowledge area;</li>
+			<li>The closer the distance between one knowledge node and one employee node, the higher the evaluation
+				score of the corresponding knowledge that the employee gets; </li>
+			<li>The cluster of knowledge nodes means some employees possess those knowledge areas in common with
+				others;</li>
+		</ol>
+		<p>
+			To explore the data from different dimensions, including the employees’ demographic attributes and knowledge
+			structures, we add several features so that users can sort or filter the data:
+		</p>
+		<ol>
+			<li>filter the knowledge network by location;</li>
+			<li>filter the knowledge network by position;</li>
+			<li>display employees’ attributes in terms of gender, age group, and persona;</li>
+			<li>display evaluation scores of each knowledge area;</li>
+			<li>simulate changes in knowledge distribution by adding/removing a group of employees.</li>
+		</ol>
+	</div>
+
+	<div class="flow-half">
+		<img src="{{ site.baseurl }}/assets/images/viz_elearning/network_1.jpg" alt="network image">
+		<img src="{{ site.baseurl }}/assets/images/viz_elearning/network_2.jpg" alt="network image">
+		<img src="{{ site.baseurl }}/assets/images/viz_elearning/network_3.jpg" alt="network image">
+		<figcaption>Figure 3. Network visualizations</figcaption>
+	</div>
+
+	<div class="flow-full"></div>
+
+	<div class="flow-full">
+		<h5>Position Hierarchy</h5>
+	</div>
+	<div class="flow-half">
+		<p>In this view, we chose a radial tree to show the hierarchical divisions in the bank. Users can explore the
+			knowledge depth within each division of the company. Each node represents a position ID. The highest
+			position is the root, and the sub-divisions spread out from the center. We also designed features to let
+			users navigate the hierarchical divisions:</p>
+		<ol>
+			<li>filter the position hierarchy by location;</li>
+			<li>filter the position hierarchy by knowledge area/domain;</li>
+			<li>display the number of employees under each position;</li>
+			<li>display the evaluation score of the chosen knowledge area/domain under each position</li>
+			<li>simulate changes in the hierarchy view by adding/removing a group of employees</li>
+		</ol>
+	</div>
+
+	<div class="flow-half">
+		<img src="{{ site.baseurl }}/assets/images/viz_elearning/level_1.jpg" alt="hierarchy image">
+		<img src="{{ site.baseurl }}/assets/images/viz_elearning/level_3.jpg" alt="hierarchy image">
+		<figcaption>Figure 4. Hierarchy visualizations</figcaption>
+	</div>
+
+	<div class="flow-full">
+		<h5>Video Demo</h5>
+		<video width="100%" height="540" controls autoplay controlsList="nodownload" oncontextmenu="return false;">
+			<source src="{{ site.baseurl }}/assets/images/viz_elearning/video_demo.mp4" type="video/mp4" />
+		</video>
+		<!-- <video class="videoWrapper">
+			<iframe src="{{ site.baseurl }}/assets/images/viz_elearning/video_demo.mp4" width="960" height="540"
+				frameborder="0" allowfullscreen></iframe>
+		</video> -->
+		<figcaption>Network visualization plus the simulation of adding new employees</figcaption>
+	</div>

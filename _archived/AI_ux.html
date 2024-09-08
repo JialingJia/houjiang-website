@@ -1,0 +1,105 @@
+---
+layout: project
+title: "Streamline AI Deployment with Graphical UI Components"
+subtitle: "Empower AI pipeline with UX"
+type: "project"
+keywords: "Design for AI, UX, Design Patterns"
+roles: "User Researcher, Interaction Designer"
+heroimage: "deep_learning/hero-image.png"
+year: "2018-2019"
+status: "active"
+
+---
+
+<!--begin flow-->
+<div class="flow">
+	<!--begin flow containers-->
+	<div class="flow-full project-title">
+		<h1 class="title">{{page.title}}</h1>
+		<h2 class="subtitle">{{page.subtitle}}</h2>
+	</div>
+	<div class="flow-half project-description">
+		<p>I cooperated with <a target="_blank"
+				href="https://seetatech.com/">Seetatech</a>, an AI start-up in China, to build a deep
+			learning platform for business use ranging from industrial face recognition, self-service retail, and
+			intelligent animal farming. The application now has being used by Ping’ An Insurance company and <a target="_blank"
+				href="https://www.ksyun.com/nv/product/KDL.html">Kingsoft Deep Learning</a>.
+		</p>
+	<p><b>Applications</b></p>
+	<figcaption>
+			<i class="fa-solid fa-hand-point-right"></i> <a target="_blank"
+				href="https://www.gpuhub.com/home">AutoDL 算力云</a>
+	</figcaption>
+	</div>
+	<div class="flow-half project-meta">
+		<!--project meta data-->
+		{% include projectdata.html %}
+		<!-- <img src="{{ site.baseurl }}/assets/images/deep_learning/hero-image.png"> -->
+		<!-- <figcaption>The Data Kanban of SeeTaaS</figcaption> -->
+	</div>
+
+	<div class="flow-full">
+		<h3>Design AI for business use vs. end-users</h3>
+	</div>
+
+	<div class="flow-half">
+		<p>It is interesting to find that there are different usage scenarios of AI when it comes to business users
+			versus personal users. For business users, the most important thing of AI development is to “get job done” - deploy AI applications in scale.
+			For example, when it comes to predict the health condition of cows’ growth based on their morphological
+			features, practitioners focus on completing the predictions from their mass data base in an effective way.
+			Based on our research, the user flow of business practitioner simply as the following steps: <b>upload the
+				data, label the data, select the model, and used the model to train the dataset</b>. Therefore, to ease
+			the training process, <b>we create functions and web interactions that are simple enough for batch
+				operations</b>. Additionally, we also create seamless service that connect the operation from data labeling
+			to training. As most of business practitioners are not technically AI developers, we integrate the
+			development process into a graphic interface to make the process easy to understand.</p>
+		<p>Different from business users, most of personal users are AI developers. And their major efforts are spent on fine-tuning
+			models or testing models in different use context. Although most python IDE and notebook
+			applications have provided rich coding environment for developers, it is still difficult for them to
+			reproduce models from scratch. Thus, <b>we design functions and
+				templates that standardize the training process and parameters tuning for developers to quickly adopt
+				new models from open-sourced platforms, like HuggingFace.</b> Additionally, we also integrated different evaluation
+			metrics within the graphic interface dashboard to test the model performance.</p>
+		<p>Finally, we designed two platforms for the business and end-users: SeeTaaS and AutoDL. SeeTaaS is an industrial-level platform which integrated data management, built-in algorithms with hyper-parameter fine-tuning, and
+			computation power as an enterprise AI platform. AutoDL is a personalized model training platform that provides popular
+			deep learning dataset and algorithms for AI developers to customize AI applications. Accompanied with these two deep learning platforms, we also designed a data labeling website
+			and a data Kanban.</p>
+	</div>
+
+	<div class="flow-half"">
+
+	<img src=" {{ site.baseurl }}/assets/images/deep_learning/Wireframing.png" alt="wireframe">
+		<figcaption>Figure 1. Wireframing the AI development process</figcaption>
+
+		<img src="{{ site.baseurl }}/assets/images/deep_learning/model_training.png" alt="interaction flows">
+		<figcaption>Figure 2. Sketching AI development process with graphic components</figcaption>
+	</div>
+
+	<div class="flow-full"><h3>Integrate AI components with design patterns</h3></div>
+	<div class="flow-full">
+		<p>Design patterns help streamline AI development process and make it friendly to use when it comes to
+			people who are not familiar with AI. In consumer markets, AI is more like
+			a tool rather than research subject. Therefore, when AI development is translated into graphic components that allow users to drag and move, 
+			it lowers the barrier for non-AI expert to quickly adopt and deploy model into practice.</p>
+		<div class="videoWrapper">
+			<video width="100%" height=100% controls autoplay controlsList="nodownload" oncontextmenu="return false;">
+				<source src="{{ site.baseurl }}/assets/images/deep_learning/seetaas.mp4" type="video/mp4" />
+			</video>
+			<!-- <iframe src="{{ site.baseurl }}/assets/images/deep_learning/seetaas.mp4" width="960" height="540"
+				frameborder="0" allowfullscreen></iframe> -->
+			<figcaption style="max-width: 100%;">This is the first interactive prototype of SeeTaaS: by designing datasets, models, and algorithms as
+					graphic components, AI practitioners can easily create different combinations to train models in scale.</figcaption>
+		</div>
+	</div>
+	<div class="flow-full">
+		<div class="videoWrapper">
+			<video width="100%" height=100% controls autoplay controlsList="nodownload" oncontextmenu="return false;">
+				<source src="{{ site.baseurl }}/assets/images/deep_learning/autodl.mp4" type="video/mp4" />
+			</video>
+			<!-- <iframe src="{{ site.baseurl }}/assets/images/deep_learning/autodl.mp4" width="960" height="540"
+				frameborder="0" allowfullscreen></iframe> -->
+			<figcaption style="max-width: 100%;">This is the first interactive prototype of AutoDL: to facilitate the learning curve of AI practitioners, users can easily reproduce AI models by using the config templates which specify algorithms,
+					parameters, and datasets. By combinging the autodl local system with its online distributed platform, practitioners
+					can update and share their the best experiments with others.</figcaption>
+		</div>
+	</div>

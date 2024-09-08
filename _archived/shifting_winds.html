@@ -1,0 +1,124 @@
+---
+layout: project
+title:  "Shifting Winds"
+subtitle: "Gendered Structures of Academic Mentorship"
+type: "project"
+keywords: "Science of science, Academic mentorship, Tree Visualization"
+members: "Jiabao Li, Houjiang Liu, Jilie Zeng, Di Wu, Ying Ding, and Alec McGail"
+heroimage: "shift_winds/hero-image.jpg"
+year: "2022"
+status: "active"
+
+---
+
+<!--begin flow-->
+<div class="flow">
+<!--begin flow containers-->
+<div class="flow-full project-title">
+	<h1 class="title">{{page.title}}</h1>
+	<h2 class="subtitle">{{page.subtitle}}</h2>
+</div>
+<div class="flow-half project-description">
+	<p>Every researcher alive today had their
+        mentors, those who helped assimilate them
+        into a life of scholarly work. And in turn
+        they each had their mentors, and so on to the
+        dawn of knowledge. In the same way, each
+        researcher’s mentees take their perspectives
+        and methods to future mentees, and to their
+        mentees, etc.</p>
+  <p>These comprise the roots and
+    branches, respectively, of the academic tree of
+    a single researcher. If we let these ancestors’
+    and descendants’ genders affect these trees
+    like a “wind,” most curl nearly to the earth.
+    We depict and describe the structure of
+    these trees, and how this wind has changed
+    over the decades. To set these trees growing
+    upright again we visualize giving differential
+    weight to male and female researchers.</p>
+	<p><b>Publications & Presentations</b></p>
+		<figcaption>
+			[Paper] Li, Jiabao, <b> Houjiang Liu </b>, Jilie Zeng, Di Wu, Ying Ding, and Alec McGail. 2022. “Shifting
+            Winds: Gendered Structures of Academic Mentorship.” In 2022 IEEE VIS Arts Program
+            (VISAP), 14–29. &nbsp
+            <i class="fa-solid fa-hand-point-right"></i> <a target="_blank"
+				href="{{ site.baseurl }}/paper/VISART22_Visualizing_mentorships.pdf">Paper</a>
+			<br>
+            <br>
+			[Design] Mentor Trees &nbsp
+			<i class="fa-solid fa-hand-point-right"></i> <a target="_blank"
+				href="https://www.mentortrees.com/">Website</a>
+		</figcaption>
+</div>
+<div class="flow-half project-meta">
+	<!--project meta data-->
+	{% include projectdata.html %}
+  <a target="_blank" href="https://www.mentortrees.com/">
+    <img src="{{ site.baseurl }}/assets/images/shift_winds/hero-image.jpg" alt="shift_winds">
+  </a>
+  <figcaption>Mentor Trees for William James</figcaption>
+</div>
+
+<div class="flow-full">
+	<h3>Data Processing and Visualization</h3>
+</div>
+
+<div class="flow-half">
+	<p>The <a href="https://www.nature.com/articles/s41597-022-01578-x">MENTORSHIP dataset</a> which we use is based
+        on the <a href="https://academictree.org/">Academic Family Tree</a>, a crowdsourced effort to collect aca-
+        demic genealogy. Registered users can input, update, or confirm the
+        information posted there. This includes relational data, keeping track
+        of advisors and their advisees, collaborators, research assistants, and
+        postdoctoral students. The dataset now holds 774,733 researchers
+        in total across 112 fields. </p>
+	<p>To narrow down the scope of visualizations and make sure that
+        the mentorship data contains relatively complete and correct
+        information for visualization, we investigate only the most
+        represented research areas. These research areas are anthropology,
+        cell biology, chemistry, computer science, engineering, history,
+        linguistics, literature, math, microbiology, neuroscience,
+        nursing, philosophy, physics, political science, and sociology.</p>
+	<p>We draw these trees with equal female
+        and male curls, and record their width and height. We also record
+        the radius and curvature of each mentee in the tree (see Figure 1).
+        The tallest and widest trees, then, correspond to the maximum
+        height and width of these drawn trees across 16 research fields.
+        By averaging the radius of curvature over all mentees in each tree,
+        we find the most tilted trees, to the right and to the left. And by
+        computing the standard deviation of all curvature for each datapoint,
+        we find the most diverse tree, the tree with the most variation in
+        curl amongst its mentees. We depict the widest and tallest tree,
+        the most tilted trees, and the most diverse tree on the website. All
+        code for generating these visualizations is 
+        <a href="https://github.com/JialingJia/scimap-FA-2021">available online</a>.</p>
+</div>
+<div class="flow-half">
+	<img src="{{ site.baseurl }}/assets/images/shift_winds/tree_metrics_annotation.png" alt="tree annotation">
+	<figcaption>Figure 1. Visual metrics of a tree, w = width, h = height, d =
+        angle in degrees, R = radius of curvature, k = curvature</figcaption>
+</div>
+
+<div class="flow-full">
+	<h3>Visuals</h3>
+</div>
+<div class="flow-full">
+	<img src="{{ site.baseurl }}/assets/images/shift_winds/william_spencer.jpg" alt="william_spencer">
+	<figcaption>Figure 2. William Spencer Hutchison</figcaption>
+</div>
+<div class="flow-half">
+	<img src="{{ site.baseurl }}/assets/images/shift_winds/stephen_hawking.jpg" alt="stephen_hawking">
+	<figcaption>Figure 3. Stephen Hawking</figcaption>
+</div>
+<div class="flow-half">
+	<img src="{{ site.baseurl }}/assets/images/shift_winds/niels_bohr.jpg" alt="niels_bohr">
+	<figcaption>Figure 4. Niels Bohr</figcaption>
+</div>
+<div class="flow-half">
+	<img src="{{ site.baseurl }}/assets/images/shift_winds/forest_comparison.jpg" alt="forest_comparison">
+	<figcaption>Figure 5. Forest comparison</figcaption>
+</div>
+<div class="flow-half">
+	<img src="{{ site.baseurl }}/assets/images/shift_winds/psychology_forest.jpg" alt="psychology_forest">
+	<figcaption>Figure 6. Pscychology Forest (proof-of-concept image)</figcaption>
+</div>

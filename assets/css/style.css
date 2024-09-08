@@ -327,7 +327,11 @@ a {
     color: black;
 }
 
-.content a {
+.content p a {
+    text-decoration: underline;
+}
+
+.content > li > a {
     text-decoration: underline;
 }
 

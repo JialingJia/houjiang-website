@@ -11,7 +11,7 @@
       <name>Houjiang Liu</name>
       <email>liuhoujiang@hotmail.com</email>
     </author>
-    <category citation-format="numeric"/>
+    <category citation-format="author-date"/>
     <category field="design"/>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
@@ -52,7 +52,32 @@
       <text variable="page"/>
     </group>
   </macro>
-  <citation et-al-min="3" et-al-use-first="1" collapse="citation-number">
+  <macro name="contributors-short">
+    <names variable="author">
+      <name form="short" and="text" delimiter=", " initialize-with=". "/>
+      <substitute>
+        <names variable="editor"/>
+        <names variable="translator"/>
+        <names variable="director"/>
+        <text macro="substitute-title"/>
+        <text macro="title"/>
+      </substitute>
+    </names>
+  </macro>
+  <citation et-al-min="3" et-al-use-first="1" collapse="year">
+    <!-- <sort>
+      <key variable="citation-number"/>
+    </sort> -->
+    <!-- <layout prefix="(" suffix=")" delimiter=", ">
+      <names variable="author" name-as-sort-order="all">
+        <name form="short" and="text" delimiter=", " delimiter-precedes-et-al="never" delimiter-precedes-last="always"/>
+        <label form="short"/>
+      </names>
+      <date variable="issued">
+        <date-part name="year"/>
+      </date>
+      <text variable="doi" prefix=" (" suffix=")" text-case="capitalize-first"/>
+    </layout> -->
     <sort>
       <key variable="citation-number"/>
     </sort>
