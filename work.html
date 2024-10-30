@@ -8,15 +8,15 @@ layout: default
 	<div class="container">
 		<h1>Current Projects</h1>
 		<div class="flow project-list">
-			<!-- <a class="flow-project">
+			<a class="flow-project">
 				<div class="project-body">
-					<img src="{{ site.baseurl }}/assets/images/fact-checking.jpg" alt="">
+					<img src="{{ site.baseurl }}/assets/images/LLM-debate-project.jpg" alt="LLM-debate">
 					<div class="project-title">
-						<h2>Human-centered NLP Fact-checking</h2>
-						<h3>Designing AI tools to assist human fact-checkers</h3>
+						<h2>Argumentative Experience</h2>
+						<h3>Reducing confirmation bias through LLM-generated multi-persona debates</h3>
 					</div>
 				</div>
-			</a> -->
+			</a>
 			{% assign sortedPosts = site.active %}
 			{% for project in sortedPosts %}
 			{% if project.status == "active" %}
