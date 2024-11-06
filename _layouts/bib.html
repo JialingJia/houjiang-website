@@ -26,6 +26,9 @@
     {% if entry.note %}
     [{{ entry.note }}]
     {% endif %}
+    {% if entry.award %}
+        <span style="font-weight: 700; color: rgb(243, 158, 2);">{{ entry.award }}</span>
+    {% endif %}
     <p></p>
 </div>
 
