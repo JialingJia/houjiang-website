@@ -362,3 +362,10 @@ img text {
 .content table.meta {
     margin-bottom: 2rem;
 }
+
+.disabled-link[aria-disabled="true"] {
+    pointer-events: none;
+    cursor: not-allowed;
+    color: gray;
+    text-decoration: none;
+  }
