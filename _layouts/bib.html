@@ -3,31 +3,31 @@
 <div>
     {{reference}}
     {% if entry.doi %}
-        <a style="font-weight: 700; color: rgb(141, 141, 141);" href="{{ entry.doi | prepend: 'https://doi.org/' }}">doi</a>
+        <a target="_blank" href="{{ entry.doi | prepend: 'https://doi.org/' }}">doi</a>
     {% endif %}
     {% if entry.arxivid %}
-        <a style="font-weight: 700; color: rgb(141, 141, 141);" href="{{ entry.arxivid | prepend: 'https://arxiv.org/abs/' }}">arxiv</a>
+        <a target="_blank" href="{{ entry.arxivid | prepend: 'https://arxiv.org/abs/' }}">arxiv</a>
     {% endif %}
     {% if entry.pdf %}
-        <a style="font-weight: 700; color: rgb(141, 141, 141);" href="{{ entry.pdf }}">pdf</a>
+        <a target="_blank" href="{{ entry.pdf }}">pdf</a>
     {% endif %}
     {% if entry.code %}
-        <a style="font-weight: 700; color: rgb(141, 141, 141);" href="{{ entry.code }}">code</a>
+        <a target="_blank" href="{{ entry.code }}">code</a>
     {% endif %}
     {% if entry.preprint %}
-        <a style="font-weight: 700; color: rgb(141, 141, 141);" href="{{ entry.preprint }}">preprint</a>
+        <a target="_blank" href="{{ entry.preprint }}">preprint</a>
     {% endif %}
     {% if entry.design %}
-        <a style="font-weight: 700; color: rgb(141, 141, 141);" href="{{ entry.design }}">design</a>
+        <a target="_blank" href="{{ entry.design }}">design</a>
     {% endif %}
     {% if entry.slides %}
-        <a style="font-weight: 700; color: rgb(141, 141, 141);" href="{{ entry.slides }}">slides</a>
+        <a target="_blank" href="{{ entry.slides }}">slides</a>
     {% endif %}
     {% if entry.note %}
     [{{ entry.note }}]
     {% endif %}
     {% if entry.award %}
-        <span style="font-weight: 700; color: rgb(243, 158, 2);">{{ entry.award }}</span>
+        <p style="font-weight: 700; color: rgb(195, 0, 0);">{{ entry.award }}</p>
     {% endif %}
     <p></p>
 </div>
