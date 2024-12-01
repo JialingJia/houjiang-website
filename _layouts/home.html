@@ -45,7 +45,7 @@
 		<div class="flow-three-one">
 				<p><b>Publications</b> <a target="_blank" href="https://scholar.google.com/citations?user=a8xtohIAAAAJ&hl=en">(Google Scholar)</a></p>
 			<div class="publications">
-				<figcaption style="margin-top: 0;">† These authors are equally contributing first authors.</figcaption>
+				<figcaption style="margin-top: 0;">* These authors are equally contributing first authors.</figcaption>
 				{% for year in (2020...2024) reversed %}
 				<p><b>{{year}}</b></p>
 				{% bibliography --file papers --query @*[year={{year}}]* %}

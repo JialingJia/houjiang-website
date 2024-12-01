@@ -3,31 +3,37 @@
 <div>
     {{reference}}
     {% if entry.doi %}
-        <a target="_blank" href="{{ entry.doi | prepend: 'https://doi.org/' }}">doi</a>
+        <i class="fa-solid fa-globe"></i> <a target="_blank" href="{{ entry.doi | prepend: 'https://doi.org/' }}">DOI</a>
     {% endif %}
     {% if entry.arxivid %}
-        <a target="_blank" href="{{ entry.arxivid | prepend: 'https://arxiv.org/abs/' }}">arxiv</a>
+        <i class="fa-solid fa-file-pdf"></i> <a target="_blank" href="{{ entry.arxivid | prepend: 'https://arxiv.org/abs/' }}">arXiv</a>
     {% endif %}
     {% if entry.pdf %}
-        <a target="_blank" href="{{ entry.pdf }}">pdf</a>
+    <i class="fa-solid fa-file-pdf"></i> <a target="_blank" href="{{ entry.pdf }}">PDF</a>
     {% endif %}
     {% if entry.code %}
-        <a target="_blank" href="{{ entry.code }}">code</a>
+        <i class="fa-brands fa-github"></i> <a target="_blank" href="{{ entry.code }}">Code</a>
     {% endif %}
     {% if entry.preprint %}
-        <a target="_blank" href="{{ entry.preprint }}">preprint</a>
+    <i class="fa-solid fa-file-pdf"></i> <a target="_blank" href="{{ entry.preprint }}">Preprint</a>
     {% endif %}
-    {% if entry.design %}
-        <a target="_blank" href="{{ entry.design }}">design</a>
+    {% if entry.website %}
+        <i class="fa-solid fa-browser"></i> <a target="_blank" href="{{ entry.website }}">Website</a>
     {% endif %}
     {% if entry.slides %}
-        <a target="_blank" href="{{ entry.slides }}">slides</a>
+        <i class="fa-solid fa-file-powerpoint"></i> <a target="_blank" href="{{ entry.slides }}">Presentation</a>
+    {% endif %}
+    {% if entry.blog %}
+        <i class="fa-solid fa-square-rss"></i> <a target="_blank" href="{{ entry.blog }}">Blog</a>
+    {% endif %}
+    {% if entry.video %}
+        <i class="fa-brands fa-youtube"></i> <a target="_blank" href="{{ entry.video }}">Video</a>
     {% endif %}
     {% if entry.note %}
-    [{{ entry.note }}]
+        ({{ entry.note }})
     {% endif %}
     {% if entry.award %}
-        <p style="font-weight: 700; color: rgb(195, 0, 0);">{{ entry.award }}</p>
+        <p style="font-weight: 700; color: rgb(214, 6, 6);"><i class="fa-solid fa-award"></i> {{ entry.award }}</p>
     {% endif %}
     <p></p>
 </div>
