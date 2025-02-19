@@ -5,7 +5,7 @@
 <section class="intro">
 	<div class="flow">
 		<div class="flow-three">
-			<img class="personal_photo"  src="{{ site.baseurl }}/assets/images/houji.jpg" alt="personal photo">
+			<img class="personal_photo"  src="{{ site.baseurl }}/assets/images/houji_professional.jpg" alt="personal photo">
 			<br>
 			<!-- <span style="display: block; text-align: center;">
 				<a class="icon" href="https://scholar.google.com/citations?user=a8xtohIAAAAJ&hl=en" target="_blank" title="Pulication"> <i class="ai ai-google-scholar ai-x"></i> </a>
@@ -13,16 +13,16 @@
 			</span> -->
 		</div>
 		<div class="flow-three-one" style="font-size: 14px;">
-			<p>你好, my name is <b>Houjiang Liu</b> ("Whole ji oy LOU") ~ I am a doctoral student (2021 to present), studying HCI and Human-centered AI at the School of Information, UT Austin. 
-				Currently, I am advised by professor <a target="_blank" href="https://www.ischool.utexas.edu/~ml/">Matthew Lease</a>, designing with NLP to combat mis/disinformation. While most of my current research has to do with AI, I prefer seeing myself as a designer, framing AI applications 
-				from a humanistic perspective.
+			<p>My name is <b>Houjiang Liu</b> ("Whole ji oy LOU"), a doctoral candidate (2021 to present) at the School of Information, UT Austin. Currently, I am advised by professor <a target="_blank" href="https://www.ischool.utexas.edu/~ml/">Matthew Lease</a> in the research group <a target="_blank" href="https://mattlease.com/lab/">AI & Human-Centered Computing</a>. 
+				My broad research interest focuses on <b>Human-Centered AI</b> and <b>Design Research</b>, with an emphasis on integrating
+				human-centered principles into AI system design.</p>
 						
-			<p>Previously, I was a design researcher at the <a target="_blank"
-					href="https://camd.northeastern.edu/center-for-design/">Center for Design</a> at the Northeastern University, working
-				with professor <a target="_blank" href="https://camd.northeastern.edu/faculty/miso-kim/">Miso Kim</a> on
+			<p>Previously, I was a design researcher in <a target="_blank"
+					href="https://camd.northeastern.edu/center-for-design/">Center for Design</a> at the Northeastern University, advised by
+				professor <a target="_blank" href="https://camd.northeastern.edu/faculty/miso-kim/">Miso Kim</a> on
 				designing services grounded in autonomy and <a target="_blank" href="https://camd.northeastern.edu/faculty/paolo-ciuccarelli/">Paolo
 						Ciuccarelli</a> on visualizing interactive network graphs. I was also a part-time lecturer
-				teaching Interaction Design in CAMD at Northeastern. Before starting my PhD at UT, I was a User Experience Designer, working at <a target="_blank" href="https://jelly.jd.com/">JD.com (Beijing)</a> and <a target="_blank" href="https://seetatech.com/">SeetaTech AI (Beijing)</a>. </p>
+				teaching Interaction Design in CAMD at Northeastern. Before my academic career, I was an Interaction Designer, working at <a target="_blank" href="https://jelly.jd.com/">JD.com (Beijing)</a> and <a target="_blank" href="https://seetatech.com/">SeetaTech AI (Beijing)</a>. </p>
 		</div>
 </section>
 <section class="paper">
@@ -38,15 +38,30 @@
 				<figcaption>Research group: <br> <a target="_blank" href="https://mattlease.com/lab/">AI & Human-Centered Computing</a>
 				<br>
 				<br>
-				Associated research community: <br> <a target="_blank" href="https://www.nlp.utexas.edu/">UT NLP</a> | <a target="_blank" href="https://sites.google.com/view/ut-misinformation-ai/">Good System Mis/disinformation</a></figcaption>
+				Associated research community: <br> <a target="_blank" href="https://www.nlp.utexas.edu/">UT NLP</a> | <a target="_blank" href="https://sites.google.com/view/ut-misinformation-ai/">Good System Mis/disinformation</a> | <br> <a target="_blank" href="https://www.cosmicai.org/">UT CosmicAI Institute</a></figcaption>
 			</p>
 			
 		</div>
+
 		<div class="flow-three-one">
-				<p><b>Publications</b> <a target="_blank" href="https://scholar.google.com/citations?user=a8xtohIAAAAJ&hl=en">(Google Scholar)</a></p>
+			<!-- <p><b>Research Highlights</b></p>
+
+			<div class="content" style="font-size: 14px;">
+				<p>
+					One central research focus is <a target="_blank" href="https://sites.google.com/view/ut-misinformation-ai/">Mis/Disinformation</a>. By collaborating with diverse stakeholders, such as journalists, fact-checkers, and the public, I help combat mis/disinformation and foster informed public discourse
+					(<a target="_blank" href="">CSCW25-2</a>, <a target="_blank" href="">25-1</a>, <a target="_blank" href="">CSCW24</a>, <a target="_blank" href="">IPM23</a>). 
+					My recent research interest expands to <a target="_blank" href="https://www.cosmicai.org/">AI-accelerated scientific discovery</a>, investigating how
+					advanced AI technologies, such as LLM and AI agents, can automate or accelerate research processes and uncover new scientific insights. </p>
+				
+					<p>	My earlier work focused on service design (<a target="_blank" href="">TDJ23</a>, <a target="_blank" href="">SheJi23</a>, <a target="_blank" href="">IASDR23</a>, <a target="_blank" href="">IASDR22-2</a>, <a target="_blank" href="">22-1</a>, <a target="_blank" href="">Cumulus21</a>) 
+						and information visualization (<a target="_blank" href="">IWC23</a>, <a target="_blank" href="">VISAP22</a>).
+					</p>
+			</div>
+			<br> -->
+			<p><b>Publications</b> <a target="_blank" href="https://scholar.google.com/citations?hl=en&user=a8xtohIAAAAJ&view_op=list_works&sortby=pubdate">(Google Scholar)</a></p>
 			<div class="publications">
 				<figcaption style="margin-top: 0;">* These authors are equally contributing as first authors.</figcaption>
-				{% for year in (2020...2024) reversed %}
+				{% for year in (2020..2024) reversed %}
 				<p><b>{{year}}</b></p>
 				{% bibliography --file papers --query @*[year={{year}}]* %}
 				{% endfor %}
