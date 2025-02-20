@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+<!--intro text-->
+<section class="paper">
+	<div class="flow">
+		<div class="flow-three"></div>
+		<div class="flow-three-one">			
+			<!-- <p><b>Publications</b> <a target="_blank" href="https://scholar.google.com/citations?hl=en&user=a8xtohIAAAAJ&view_op=list_works&sortby=pubdate">(Google Scholar)</a></p> -->
+			<div class="publications">
+				<figcaption style="margin-top: 0;">* These authors are equally contributing as first authors.</figcaption>
+				{% for year in (2020..2024) reversed %}
+				<p><b>{{year}}</b></p>
+				{% bibliography --file papers --query @*[year={{year}}]* %}
+				{% endfor %}
+			</div>
+			<br>
+		</div>
+	</div>
+</section>
+<section class="paper">
+	<div class="flow">
+		<div class="flow-three"></div>
+		<div class="flow-three-one">
+			<p><b>Others</b></p>
+			<p style="font-size: 14px;">For years, I have also been assisting my grandpa, a retired professor, in his lifelong work of editing Chinese dictionaries. Among his series of books, I helped co-edit the following work:</p>
+			<div class="publications">
+				{% bibliography --file books%}
+			</div>
+		</div>
+	</div>
+</section>
+
+{% include footer.html %}

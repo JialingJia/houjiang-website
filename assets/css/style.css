@@ -18,6 +18,12 @@
     box-shadow: 0 0.5px 0 0 #c5c5c5;
 }
 
+.research-highlight {
+    padding-top: 0.5rem;
+    /* box-shadow: 0 0.5px 0 0 #c5c5c5; */
+}
+
+
 .intro, .paper, .footer p{
     font-size: 15px;
 }
