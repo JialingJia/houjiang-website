@@ -114,11 +114,11 @@
         </else-if>
         <else-if type="chapter paper-conference" match="any">
           <group delimiter=" ">
-            <text macro="title" suffix="."/>
+            <text macro="title" suffix=". "/>
             <choose>
               <if variable="container-title">
                 <text term="in" text-case="capitalize-first" suffix=": "/>
-                <text macro="editor" suffix=" "/>
+                <text macro="editor" suffix=". "/>
                 <group delimiter=", ">
                   <text variable="container-title" font-style="italic"/>
                   <text macro="page"/>
@@ -136,7 +136,7 @@
               </else>
             </choose>
             <date variable="issued">
-              <date-part name="year"/>
+              <date-part name="year" suffix=". "/>
             </date>
           </group>
         </else-if>
