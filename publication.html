@@ -13,7 +13,7 @@ layout: default
 			<div class="publications">
 				<figcaption style="max-width: 100vw;">I now primarily publish in HCI-related journals and conferences (PACMHCI, IPM, IWC), whereas I previously focused more on design research venues (TDJ, She Ji, IASDR).</figcaption>
 				<figcaption>* These authors are equally contributing as first authors.</figcaption>
-				{% for year in (2020..2024) reversed %}
+				{% for year in (2020..2025) reversed %}
 				<p><b>{{year}}</b></p>
 				{% bibliography --file papers --query @*[year={{year}}]* %}
 				{% endfor %}
