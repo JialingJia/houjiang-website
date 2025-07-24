@@ -32,7 +32,7 @@ body {
 
 
 .intro, .paper, .footer p{
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .footer {
@@ -41,15 +41,15 @@ body {
 }
 
 .publications{
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .intro p {
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .intro ol, ul, li {
-    font-size: 15px;
+    font-size: 14px;
     margin: 0px;
     padding: 0px;
 }
@@ -115,8 +115,8 @@ a:hover {
     height: 100%;
     display: block;
     margin-left: 0;
-    transform: scale(1.2);
-    transform-origin: 43% 0%; 
+    transform: scale(1.6);
+    transform-origin: 45% 0%; 
 }
 
 .flow {
