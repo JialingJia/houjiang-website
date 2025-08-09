@@ -7,31 +7,31 @@
     {% endif %}
     <br>
     {% if entry.doi %}
-        <i class="fa-solid fa-globe"></i> <a target="_blank" href="{{ entry.doi | prepend: 'https://doi.org/' }}"> DOI </a> &nbsp
+        <i class="fa-solid fa-globe"></i> <a target="_blank" href="{{ entry.doi | prepend: 'https://doi.org/' }}"> DOI</a> &nbsp
     {% endif %}
     {% if entry.arxivid %}
-        <i class="fa-solid fa-file-pdf"></i> <a target="_blank" href="{{ entry.arxivid | prepend: 'https://arxiv.org/abs/' }}"> arXiv </a> &nbsp
+        <i class="fa-solid fa-file-pdf"></i> <a target="_blank" href="{{ entry.arxivid | prepend: 'https://arxiv.org/abs/' }}"> arXiv</a>&nbsp
     {% endif %}
     {% if entry.pdf %}
-    <i class="fa-solid fa-file-pdf"></i> <a target="_blank" href="{{ entry.pdf }}"> PDF </a> &nbsp
+    <i class="fa-solid fa-file-pdf"></i> <a target="_blank" href="{{ entry.pdf }}"> PDF</a> &nbsp
     {% endif %}
     {% if entry.code %}
-        <i class="fa-brands fa-github"></i> <a target="_blank" href="{{ entry.code }}"> Code </a> &nbsp
+        <i class="fa-brands fa-github"></i> <a target="_blank" href="{{ entry.code }}"> Code</a> &nbsp
     {% endif %} 
     {% if entry.preprint %}
-    <i class="fa-solid fa-file-pdf"></i> <a target="_blank" href="{{ entry.preprint }}"> Preprint </a> &nbsp
+    <i class="fa-solid fa-file-pdf"></i> <a target="_blank" href="{{ entry.preprint }}"> Preprint</a> &nbsp
     {% endif %}
     {% if entry.website %}
-        <i class="fa-solid fa-browser"></i> <a target="_blank" href="{{ entry.website }}"> Website </a> &nbsp
+        <i class="fa-solid fa-browser"></i> <a target="_blank" href="{{ entry.website }}"> Website</a> &nbsp
     {% endif %}
     {% if entry.slides %}
-        <i class="fa-solid fa-file-powerpoint"></i> <a target="_blank" href="{{ entry.slides }}"> Presentation </a> &nbsp
+        <i class="fa-solid fa-file-powerpoint"></i> <a target="_blank" href="{{ entry.slides }}"> Presentation</a> &nbsp
     {% endif %}
     {% if entry.blog %}
-        <i class="fa-solid fa-square-rss"></i> <a target="_blank" href="{{ entry.blog }}"> Blog </a> &nbsp
+        <i class="fa-solid fa-square-rss"></i> <a target="_blank" href="{{ entry.blog }}"> Blog</a> &nbsp
     {% endif %}
     {% if entry.video %}
-        <i class="fa-brands fa-youtube"></i> <a target="_blank" href="{{ entry.video }}"> Video </a> &nbsp
+        <i class="fa-brands fa-youtube"></i> <a target="_blank" href="{{ entry.video }}"> Video</a> &nbsp
     {% endif %}
     {% if entry.award %}
         <p style="font-weight: 500; color: rgb(214, 6, 6);"><i class="fa-solid fa-award"></i> {{ entry.award }}</p>
