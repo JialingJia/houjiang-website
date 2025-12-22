@@ -55,7 +55,9 @@ body {
 }
 
 .intro p a{
-    text-decoration: underline;
+    font-weight: 500;
+    color: brown;
+    /* text-decoration: underline; */
 }
 
 .intro li a{
@@ -68,6 +70,11 @@ a.icon {
     /* text-align: center;  */
     /* width: 100%; */
     margin-right: 0.5rem;
+}
+
+.Selected {
+    color: #212121;
+    font-weight: 500;
 }
 
 /*navbar-----------------------*/
@@ -104,8 +111,8 @@ a:hover {
 }
 
 .photo-container {
-    width: 95%;         /* Set your desired size */
-    height: 350px;
+    width: 90%;         /* Set your desired size */
+    height: 340px;
     overflow: hidden;     /* Hide overflow caused by zoom */
     position: relative;
   }
@@ -115,7 +122,7 @@ a:hover {
     height: 100%;
     display: block;
     margin-left: 0;
-    transform: scale(1.6);
+    transform: scale(1.5);
     transform-origin: 45% 0%; 
 }
 
@@ -374,7 +381,8 @@ a {
 }
 
 .content p a {
-    text-decoration: underline;
+    font-weight: 500;
+    /* text-decoration: underline; */
 }
 
 .content > li > a {

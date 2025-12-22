@@ -9,7 +9,8 @@
 
  .ai {
      font-family: 'Academicons';
-     font-weight: 400;
+     font-size: larger;
+     font-weight: 700;
      -moz-osx-font-smoothing: grayscale;
      -webkit-font-smoothing: antialiased;
      display: inline-block;
