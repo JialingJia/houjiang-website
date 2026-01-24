@@ -8,12 +8,14 @@ layout: default
 		<div class="flow-three">
 		</div>
 		<div class="flow-three-one">
-			<p><b>Academic publications</b></p>			
+			<p><b>Academic publications</b></p>
 			<!-- <p><b>Publications</b> <a target="_blank" href="https://scholar.google.com/citations?hl=en&user=a8xtohIAAAAJ&view_op=list_works&sortby=pubdate">(Google Scholar)</a></p> -->
 			<div class="publications">
-				<figcaption style="max-width: 100vw;">I now primarily publish in HCI-related journals and conferences (PACMHCI, IPM, IWC), whereas I previously focused more on design research venues (TDJ, She Ji, IASDR).</figcaption>
+				<figcaption style="max-width: 100vw;">I now primarily publish in HCI-related journals and conferences
+					(PACMHCI, IPM, IWC), whereas I previously focused more on design research venues (TDJ, She Ji,
+					IASDR).</figcaption>
 				<figcaption>* These authors are equally contributing as first authors.</figcaption>
-				{% for year in (2020..2025) reversed %}
+				{% for year in (2020..2026) reversed %}
 				<p><b>{{year}}</b></p>
 				{% bibliography --file papers --query @*[year={{year}}]* %}
 				{% endfor %}
@@ -27,7 +29,9 @@ layout: default
 		<div class="flow-three"></div>
 		<div class="flow-three-one">
 			<p><b>Others</b></p>
-			<figcaption style="max-width: 100vw;">For years, I have also been assisting my grandpa, a retired professor, in his lifelong work of editing Chinese dictionaries. Among his series of books, I helped co-edit the following work:</figcaption>
+			<figcaption style="max-width: 100vw;">For years, I have also been assisting my grandpa, a retired professor,
+				in his lifelong work of editing Chinese dictionaries. Among his series of books, I helped co-edit the
+				following work:</figcaption>
 			<div class="publications">
 				{% bibliography --file books%}
 			</div>
