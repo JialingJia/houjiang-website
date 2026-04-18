@@ -5,7 +5,7 @@ layout: default
 <!--research list-->
 <section class="research">
 
-	<div class="container">
+	<!-- <div class="container">
 		<h1>Current Projects</h1>
 		<div class="flow project-list">
 			<a class="flow-project" target="_blank" href="https://arxiv.org/abs/2505.09862">
@@ -43,11 +43,37 @@ layout: default
 			{% endif %}
 			{% endfor %}
 		</div>
-	</div>
+	</div> -->
 
 	<div class="container">
 		<h1>Archived Projects</h1>
 		<div class="flow project-list">
+			{% assign sortedPosts = site.active %}
+			{% for project in sortedPosts %}
+			{% if project.status == "active" %}
+			<a class="flow-project" href="{{ site.baseurl }}{{ project.url }}.html">
+				<div class="project-body">
+					<img src="{{ site.baseurl }}/assets/images/{{ project.heroimage }}" alt="">
+					{% if project.type == "project" %}
+					<div class="project-title">
+						<h2>{{ project.title }}</h2>
+						<h3>{{ project.subtitle }}</h3>
+					</div>
+					{% endif %}
+				</div>
+			</a>
+			{% endif %}
+			{% endfor %}
+			<a class="flow-project" target="_blank"
+				href="https://informationplusconference.com/2025/exhibition_items/05_item/">
+				<div class="project-body">
+					<img src="{{ site.baseurl }}/assets/images/bio.jpg" alt="">
+					<div class="project-title">
+						<h2>Biophilia</h2>
+						<h3>Mapping the Emotional Pulse of Urban Nature</h3>
+					</div>
+				</div>
+			</a>
 			<a class="flow-project" target="_blank" href="https://designforemergency.org/">
 				<div class="project-body">
 					<img src="{{ site.baseurl }}/assets/images/designforemergency.jpg" alt="">
@@ -74,10 +100,10 @@ layout: default
 				<div class="project-body">
 					<img src="{{ site.baseurl }}/assets/images/{{ project.heroimage }}" alt="">
 					{% if project.type == "project" %}
-						<div class="project-title">
-							<h2>{{ project.title }}</h2>
-							<h3>{{ project.subtitle }}</h3>
-						</div>
+					<div class="project-title">
+						<h2>{{ project.title }}</h2>
+						<h3>{{ project.subtitle }}</h3>
+					</div>
 					{% endif %}
 					{% if project.type == "poster" %}
 					<div class="project-title">
