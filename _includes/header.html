@@ -23,11 +23,11 @@
     <div class="flow">
       <div class="flow-three"></div>
       <div class="flow-three-one">
-        <a href="{{ site.baseurl }}/" class="nav-item">Home</a>
-        <!-- <a href="{{ site.baseurl}}/work.html" class="nav-item">Design</a> -->
-        <a href="{{ site.baseurl}}/publication.html" class="nav-item">Publications</a>
-        <a target="_blank" href="{{ site.baseurl}}/HJ_CV.pdf" class="nav-item">CV</a>
-        <!-- <a href="{{ site.baseurl }}/" class="nav-item">About</a> -->
+        <a href="{{ site.baseurl }}/" class="nav-item {% if page.url == '/' or page.url == '/index.html' %}active{% endif %}">Home</a>
+        <!-- <a href="{{ site.baseurl}}/work.html" class="nav-item {% if page.url == '/work.html' %}active{% endif %}">Design</a> -->
+        <a href="{{ site.baseurl }}/publication.html" class="nav-item {% if page.url == '/publication.html' %}active{% endif %}">Publications</a>
+        <a target="_blank" href="{{ site.baseurl }}/HJ_CV.pdf" class="nav-item">CV</a>
+        <!-- <a href="{{ site.baseurl }}/" class="nav-item {% if page.url == '/about.html' %}active{% endif %}">About</a> -->
       </div>
     </div>
   </nav>

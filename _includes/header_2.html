@@ -21,10 +21,10 @@
 <body>
     <nav class="nav">
         <div class="container">
-          <a href="{{ site.baseurl }}/iSchoolDisplay/wave1.html" class="nav-item">Wave1</a>
-          <!-- <a href="{{ site.baseurl}}/iSchoolDisplay/wave2.html" class="nav-item disabled-link" aria-disabled="true">Wave2</a> -->
-          <a href="{{ site.baseurl}}/iSchoolDisplay/wave2.html" class="nav-item">Wave2</a>
-          <a href="{{ site.baseurl}}/iSchoolDisplay/wave3.html" class="nav-item">Wave3</a>
+          <a href="{{ site.baseurl }}/iSchoolDisplay/wave1.html" class="nav-item {% if page.url == '/iSchoolDisplay/wave1.html' %}active{% endif %}">Wave1</a>
+          <!-- <a href="{{ site.baseurl}}/iSchoolDisplay/wave2.html" class="nav-item disabled-link {% if page.url == '/iSchoolDisplay/wave2.html' %}active{% endif %}" aria-disabled="true">Wave2</a> -->
+          <a href="{{ site.baseurl }}/iSchoolDisplay/wave2.html" class="nav-item {% if page.url == '/iSchoolDisplay/wave2.html' %}active{% endif %}">Wave2</a>
+          <a href="{{ site.baseurl }}/iSchoolDisplay/wave3.html" class="nav-item {% if page.url == '/iSchoolDisplay/wave3.html' %}active{% endif %}">Wave3</a>
         </div>
       </nav>
 </body>

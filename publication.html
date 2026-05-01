@@ -16,16 +16,11 @@ layout: default
 					IASDR).</figcaption>
 				<figcaption>* These authors are equally contributing as first authors.</figcaption>
 				{% for year in (2020..2026) reversed %}
-				<p><b>{{year}}</b></p>
+				<p class="category-header">{{year}}</p>
 				{% bibliography --file papers --query @*[year={{year}}]* %}
 				{% endfor %}
 			</div>
-			<br>
 		</div>
-	</div>
-</section>
-<section class="paper">
-	<div class="flow">
 		<div class="flow-three"></div>
 		<div class="flow-three-one">
 			<p><b>Others</b></p>
