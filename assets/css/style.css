@@ -135,9 +135,9 @@ a:hover {
 }
 
 .photo-container {
-    width: 90%;
+    width: 80%;
     /* Set your desired size */
-    height: 340px;
+    height: 300px;
     overflow: hidden;
     /* Hide overflow caused by zoom */
     position: relative;
