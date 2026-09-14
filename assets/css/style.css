@@ -101,6 +101,11 @@ blockquote.research-vision {
     padding-bottom: 0.2rem;
 }
 
+.category-note {
+    font-weight: 400;
+    color: #888;
+}
+
 /* Design & data-visualization highlights grid */
 .design-grid {
     column-count: 2;
@@ -146,6 +151,13 @@ blockquote.research-vision {
     color: #777;
     font-size: 13px;
     line-height: 1.35;
+}
+
+/* Single column for the design grid on phones */
+@media only screen and (max-width: 600px) {
+    .design-grid {
+        column-count: 1;
+    }
 }
 
 /*navbar-----------------------*/
@@ -239,8 +251,6 @@ a:hover {
     }
 
     .personal_photo {
-        margin-left: 0;
-        margin-top: 5px;
         display: block;
         width: 100%;
         border-radius: 100%;
