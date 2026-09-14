@@ -81,14 +81,71 @@ a.icon {
     font-weight: 500;
 }
 
+blockquote.research-vision {
+    background: none;
+    border-left: 3px solid brown;
+    padding: 0.15rem 0 0.15rem 1rem;
+    margin: 0.15rem 0 1.5rem 0;
+    color: #555;
+    /* font-style: italic; */
+    line-height: 1.55;
+}
+
 .category-header {
     font-weight: 600;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     margin-bottom: 0.5rem;
     color: #333;
     font-size: 14px;
     border-bottom: 1px solid #d5d5d5;
     padding-bottom: 0.2rem;
+}
+
+/* Design & data-visualization highlights grid */
+.design-grid {
+    column-count: 2;
+    column-gap: 1.5rem;
+    margin: 0.5rem 0 1rem 0;
+}
+
+.design-card {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 1.25rem;
+    break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+    text-decoration: none;
+    color: inherit;
+}
+
+.design-card .thumb {
+    width: 100%;
+    overflow: hidden;
+    background: #f0f0f0;
+}
+
+.design-card .thumb img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.35s ease;
+}
+
+.design-card:hover .thumb img {
+    transform: scale(1.05);
+}
+
+.design-title {
+    margin-top: 0.4rem;
+    font-weight: 600;
+    color: #212121;
+    line-height: 1.3;
+}
+
+.design-sub {
+    color: #777;
+    font-size: 13px;
+    line-height: 1.35;
 }
 
 /*navbar-----------------------*/
@@ -187,6 +244,40 @@ a:hover {
         display: block;
         width: 100%;
         border-radius: 100%;
+    }
+}
+
+/* Single-column (mobile/tablet) layout: constrain the photo and reorder
+   so the main content leads, with contact/updates below. */
+@media only screen and (max-width: 999px) {
+    .flow {
+        flex-direction: column;
+    }
+
+    /* Lift the sidebar's boxes into .flow so they can be reordered
+       around the main content column. */
+    .flow-three {
+        display: contents;
+    }
+
+    .photo-container {
+        order: 1;
+        width: 200px;
+        max-width: 70%;
+        height: 200px;
+        margin-top: 2rem;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 50%;
+    }
+
+    .flow-three-one {
+        order: 2;
+    }
+
+    .sidebar-details {
+        order: 3;
+        padding: 0 1.2em;
     }
 }
 
@@ -384,7 +475,7 @@ figcaption,
 .caption {
     font-style: normal;
     margin-top: 0.3rem;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.3rem;
     font-size: 0.8rem;
     line-height: 1.333em;
     color: #666;
