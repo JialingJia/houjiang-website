@@ -15,7 +15,7 @@ layout: default
 					(PACMHCI, IPM, IWC), whereas I previously focused more on design research venues (TDJ, She Ji,
 					IASDR).</figcaption>
 				<figcaption>* These authors are equally contributing as first authors.</figcaption>
-				{% for year in (2020..2026) reversed %}
+				{% for year in (2020..2027) reversed %}
 				<p class="category-header">{{year}}</p>
 				{% bibliography --file papers --query @*[year={{year}}]* %}
 				{% endfor %}
