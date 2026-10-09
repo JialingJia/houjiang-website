@@ -2,9 +2,6 @@
 ---
 <div>
     {{reference}}     
-    {% if entry.note %}
-    ({{ entry.note }}) &nbsp
-    {% endif %}
     <br>
     {% if entry.doi %}
         <i class="fa-solid fa-globe"></i> <a target="_blank" href="{{ entry.doi | prepend: 'https://doi.org/' }}"> DOI</a> &nbsp

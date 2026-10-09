@@ -79,7 +79,7 @@
       <text variable="citation-number"/>
     </layout>
   </citation>
-  <bibliography entry-spacing="0" second-field-align="flush">
+  <bibliography entry-spacing="0">
     <layout>
       <!--<text variable="citation-number" suffix="."/>-->
       <choose>
@@ -176,6 +176,7 @@
         </else>
       </choose>
       <text macro="author"/>
+      <text variable="note" prefix="&#160;(" suffix=")"/>
     </layout>
   </bibliography>
 </style>

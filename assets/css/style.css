@@ -106,6 +106,19 @@ blockquote.research-vision {
     color: #888;
 }
 
+/* Publication list alignment */
+.publications ol.bibliography {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.publications ol.bibliography > li {
+    margin: 0 0 1rem 0;
+    padding: 0;
+    list-style: none;
+}
+
 /* Design & data-visualization highlights grid */
 .design-grid {
     column-count: 2;
