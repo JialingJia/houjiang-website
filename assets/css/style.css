@@ -93,17 +93,19 @@ blockquote.research-vision {
 
 .category-header {
     font-weight: 600;
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
-    color: #333;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: brown;
+    background-color: rgba(165, 42, 42, 0.07);
     font-size: 14px;
-    border-bottom: 1px solid #d5d5d5;
-    padding-bottom: 0.2rem;
+    line-height: 1.45;
+    padding: 0.45rem 0.8rem;
+    border-radius: 3px;
 }
 
 .category-note {
     font-weight: 400;
-    color: #888;
+    color: #8a6a6a;
 }
 
 /* Publication list alignment */
