@@ -175,7 +175,7 @@
           </group>
         </else>
       </choose>
-      <text macro="author"/>
+      <text macro="author" prefix="@@AUTHORS@@"/>
       <text variable="note" prefix="&#160;(" suffix=")"/>
     </layout>
   </bibliography>

@@ -1,8 +1,7 @@
 ---
 ---
 <div>
-    {{reference}}     
-    <br>
+    {{ reference | replace: "@@AUTHORS@@", "<br>" | replace: "font-weight: medium", "font-weight: 500" }}&nbsp;
     {% if entry.doi %}
         <i class="fa-solid fa-globe"></i> <a target="_blank" href="{{ entry.doi | prepend: 'https://doi.org/' }}"> DOI</a> &nbsp
     {% endif %}
