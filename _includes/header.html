@@ -4,6 +4,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+<script>
+  // Apply the saved theme before first paint to avoid a flash.
+  (function () {
+    try {
+      var t = localStorage.getItem('theme');
+      if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  })();
+</script>
 <title>Houji</title>
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
@@ -28,9 +38,36 @@
         <a href="{{ site.baseurl }}/publication.html" class="nav-item {% if page.url == '/publication.html' %}active{% endif %}">Publications</a>
         <!-- <a target="_blank" href="{{ site.baseurl }}/HJ_CV.pdf" class="nav-item">CV</a> -->
         <!-- <a href="{{ site.baseurl }}/" class="nav-item {% if page.url == '/about.html' %}active{% endif %}">About</a> -->
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode">
+          <i class="fa-solid fa-moon icon-moon" aria-hidden="true"></i><i class="fa-solid fa-sun icon-sun" aria-hidden="true"></i>
+        </button>
       </div>
     </div>
   </nav>
+<script>
+  (function () {
+    var btn = document.getElementById('theme-toggle');
+    if (!btn) return;
+    var mq = window.matchMedia('(prefers-color-scheme: dark)');
+    function current() {
+      var t = document.documentElement.getAttribute('data-theme');
+      return t || (mq.matches ? 'dark' : 'light');
+    }
+    function label() {
+      var next = current() === 'dark' ? 'light' : 'dark';
+      btn.setAttribute('aria-label', 'Switch to ' + next + ' mode');
+      btn.setAttribute('title', 'Switch to ' + next + ' mode');
+    }
+    btn.addEventListener('click', function () {
+      var next = current() === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch (e) {}
+      label();
+    });
+    if (mq.addEventListener) mq.addEventListener('change', label);
+    label();
+  })();
+</script>
   <script src="{{ site.baseurl }}/assets/js/tabs.js"></script>
 </body>
 <!--end header include-->

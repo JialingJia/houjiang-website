@@ -362,7 +362,38 @@ status: "active"
                 </table>
         </div>
         <div class="flow-full">
-                <h3>To be continued</h3>
+                <h3>Designing AI-assisted Claim Prioritization</h3>
+        </div>
+        <div class="flow-full">
+                <p>Among the ideas above, choosing which claims to check is one of the most pressing. Given the volume
+                        of potentially false claims online, claim prioritization is essential for allocating the
+                        limited human resources available for fact-checking. In the third <a target="_blank"
+                                href="https://dl.acm.org/doi/10.1145/3757473">study</a>, we treat claim prioritization
+                        as an information retrieval (IR) task. Just as IR relevance is multidimensional, with many
+                        factors shaping which search results a user deems relevant, <b>checkworthiness</b> is also
+                        multi-faceted, subjective, and even personal: many factors influence how fact-checkers triage
+                        and select which claims to check.</p>
+                <p>Following a Research through Design approach combined with mixed-method evaluation, we developed an
+                        AI-assisted claim prioritization prototype (Figure 2) and used it as a probe. It analyzes,
+                        ranks, and filters large sets of social media claims along criteria such as verifiability,
+                        likelihood of being false, potential for harm, and interest to the public. Fact-checkers can
+                        (A) search claims semantically, (B) filter by multiple facets and weight criteria to match
+                        their own priorities, (C) define new criteria in plain language (e.g., "propaganda"), which an
+                        LLM then applies to every claim, and (D) preview and select claims for further
+                        investigation.</p>
+                <p>With 16 professional fact-checkers using the prototype, we uncovered a hierarchical prioritization
+                        strategy that fact-checkers implicitly use, revealing an underexplored aspect of their workflow.
+                        We offer actionable design recommendations for improving claim triage across multidimensional
+                        checkworthiness and for tailoring this process with LLM integration. The prototype is <a
+                                target="_blank" href="https://github.com/JialingJia/claim_prioritization">open
+                                source</a>.</p>
+                <br>
+                <img src="{{ site.baseurl }}/assets/images/fact-checking/claim-prioritization-UI.jpg"
+                        alt="Claim prioritization prototype interface with semantic search, multi-faceted filters, user-generated criteria, and a claim list">
+                <figcaption style="max-width: 100%;">Figure 2. The AI-assisted claim prioritization prototype: (A)
+                        semantic search and similarity adjustment, (B) multi-faceted filters and personalized
+                        weighting, (C) user-generated facets, and (D) claim lists for pagination, preview, and
+                        selection.</figcaption>
         </div>
 
 </div>
