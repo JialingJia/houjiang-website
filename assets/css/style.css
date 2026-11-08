@@ -121,6 +121,24 @@ hr {
     border-bottom-color: var(--accent);
 }
 
+/* Numbered step badges in tabs (a filled circle in the tab's color) */
+.step-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.1em;
+    height: 1.1em;
+    border-radius: 50%;
+    background-color: currentColor;
+    font-size: 0.85em;
+    line-height: 1;
+}
+
+.step-num > span {
+    color: var(--bg);
+    font-weight: 700;
+}
+
 /* On phones, stack the tabs so every label is visible instead of
    hiding the overflow in a sideways scroll. */
 @media only screen and (max-width: 768px) {
@@ -172,6 +190,12 @@ hr {
 .paper + .site-footer {
     box-shadow: none;
     margin-top: 0;
+}
+
+/* 404 page: short message, keep the footer from riding up */
+.not-found {
+    padding-top: 2rem;
+    min-height: 50vh;
 }
 
 /* Theme toggle in the nav */
