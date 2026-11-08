@@ -6,17 +6,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="light dark">
 <script>
-  // Apply the saved theme before first paint to avoid a flash.
+  // Apply a manual theme choice before first paint to avoid a flash.
+  // The choice is kept only while the system theme is the same as when it was made.
   (function () {
     try {
       var t = localStorage.getItem('theme');
-      if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+      var sys = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      if ((t === 'dark' || t === 'light') && localStorage.getItem('theme-system') === sys) {
+        document.documentElement.setAttribute('data-theme', t);
+      } else {
+        localStorage.removeItem('theme');
+        localStorage.removeItem('theme-system');
+      }
     } catch (e) {}
   })();
 </script>
-<title>Houji</title>
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<title>{% if page.title and page.title != "Home" %}{{ page.title }} · {% endif %}Houjiang Liu</title>
+{% include meta.html %}
 <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous"> -->
 <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/fontawesome.css">
 <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/brands.css">
@@ -46,28 +52,59 @@
   </nav>
 <script>
   (function () {
+    var root = document.documentElement;
     var btn = document.getElementById('theme-toggle');
-    if (!btn) return;
     var mq = window.matchMedia('(prefers-color-scheme: dark)');
-    function current() {
-      var t = document.documentElement.getAttribute('data-theme');
-      return t || (mq.matches ? 'dark' : 'light');
+    function system() { return mq.matches ? 'dark' : 'light'; }
+    function current() { return root.getAttribute('data-theme') || system(); }
+    function save(t) {
+      try {
+        if (t) {
+          localStorage.setItem('theme', t);
+          localStorage.setItem('theme-system', system());
+        } else {
+          localStorage.removeItem('theme');
+          localStorage.removeItem('theme-system');
+        }
+      } catch (e) {}
     }
     function label() {
+      if (!btn) return;
       var next = current() === 'dark' ? 'light' : 'dark';
       btn.setAttribute('aria-label', 'Switch to ' + next + ' mode');
       btn.setAttribute('title', 'Switch to ' + next + ' mode');
     }
-    btn.addEventListener('click', function () {
+    // A manual choice only overrides the system while it differs from it.
+    // Picking the mode the system already uses hands control back to the system.
+    if (btn) btn.addEventListener('click', function () {
       var next = current() === 'dark' ? 'light' : 'dark';
-      document.documentElement.setAttribute('data-theme', next);
-      try { localStorage.setItem('theme', next); } catch (e) {}
+      if (next === system()) {
+        root.removeAttribute('data-theme');
+        save(null);
+      } else {
+        root.setAttribute('data-theme', next);
+        save(next);
+      }
       label();
     });
-    if (mq.addEventListener) mq.addEventListener('change', label);
+    // If the system theme has changed since the choice was made, follow the system again.
+    function sync() {
+      var savedSys = null;
+      try { savedSys = localStorage.getItem('theme-system'); } catch (e) {}
+      if (root.hasAttribute('data-theme') && savedSys !== system()) {
+        root.removeAttribute('data-theme');
+        save(null);
+      }
+      label();
+    }
+    if (mq.addEventListener) mq.addEventListener('change', sync);
+    else if (mq.addListener) mq.addListener(sync);
+    window.addEventListener('focus', sync);
+    window.addEventListener('pageshow', sync);
+    document.addEventListener('visibilitychange', function () {
+      if (!document.hidden) sync();
+    });
     label();
   })();
 </script>
-  <script src="{{ site.baseurl }}/assets/js/tabs.js"></script>
-</body>
 <!--end header include-->

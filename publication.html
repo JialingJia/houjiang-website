@@ -1,9 +1,11 @@
 ---
 layout: default
+title: Publications
 ---
 
 <!--intro text-->
 <section class="paper">
+	{% assign current_year = site.time | date: "%Y" | plus: 0 %}
 	<div class="flow">
 		<div class="flow-three">
 		</div>
@@ -15,9 +17,12 @@ layout: default
 					(PACMHCI, IPM, IWC), whereas I previously focused more on design research venues (TDJ, She Ji,
 					IASDR).</figcaption>
 				<figcaption>* These authors are equally contributing as first authors.</figcaption>
-				{% for year in (2020..2026) reversed %}
-				<p class="category-header">{{year}}</p>
+				{% for year in (2020..current_year) reversed %}
+				{% capture year_count %}{% bibliography_count --file papers --query @*[year={{year}}]* %}{% endcapture %}
+				{% if year_count != "0" %}
+				<h3 class="year-header">{{year}}</h3>
 				{% bibliography --file papers --query @*[year={{year}}]* %}
+				{% endif %}
 				{% endfor %}
 			</div>
 		</div>
@@ -34,4 +39,3 @@ layout: default
 	</div>
 </section>
 
-{% include footer.html %}

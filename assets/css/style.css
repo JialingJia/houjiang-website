@@ -11,12 +11,10 @@
     --caption: #666666;
     --tab-inactive: #999999;
     --border: #8a8a8a;
-    --link-hover: #8a8a8a;
     --accent: brown;
     --accent-bg: rgba(165, 42, 42, 0.07);
     --accent-note: #8a6a6a;
     --thumb-bg: #f0f0f0;
-    --award: rgb(214, 6, 6);
     --code-bg: #f5f5f5;
 }
 
@@ -30,12 +28,10 @@
     --caption: #a0a0a0;
     --tab-inactive: #8a8a8a;
     --border: #44484e;
-    --link-hover: #b8b8b8;
     --accent: #e3937f;
     --accent-bg: rgba(227, 147, 127, 0.12);
     --accent-note: #b8978d;
     --thumb-bg: #24272b;
-    --award: #ff7a6e;
     --code-bg: #24272b;
 }
 
@@ -50,13 +46,11 @@
         --caption: #a0a0a0;
         --tab-inactive: #8a8a8a;
         --border: #44484e;
-        --link-hover: #b8b8b8;
         --accent: #e3937f;
         --accent-bg: rgba(227, 147, 127, 0.12);
         --accent-note: #b8978d;
         --thumb-bg: #24272b;
-        --award: #ff7a6e;
-        --code-bg: #24272b;
+            --code-bg: #24272b;
     }
 }
 
@@ -103,6 +97,10 @@ hr {
 }
 
 /* Bulma tabs (e.g. the step switcher on project pages) */
+.tabs {
+    font-size: inherit;
+}
+
 .tabs ul,
 .tabs a {
     border-bottom-color: var(--border);
@@ -110,6 +108,7 @@ hr {
 
 .tabs a {
     color: var(--text-muted);
+    text-decoration: none;
 }
 
 .tabs a:hover {
@@ -122,13 +121,57 @@ hr {
     border-bottom-color: var(--accent);
 }
 
+/* On phones, stack the tabs so every label is visible instead of
+   hiding the overflow in a sideways scroll. */
+@media only screen and (max-width: 768px) {
+    .tabs {
+        white-space: normal;
+        overflow: visible;
+    }
+
+    .tabs ul {
+        flex-direction: column;
+        align-items: stretch;
+        flex-shrink: 1;
+        min-width: 0;
+        width: 100%;
+        border-bottom: none;
+    }
+
+    .tabs a {
+        justify-content: flex-start;
+        padding: 0.6em 0.25em;
+        white-space: normal;
+    }
+}
+
 .text-muted {
     color: var(--text-muted);
 }
 
 .award {
     font-weight: 600;
-    color: var(--award);
+    color: var(--accent);
+}
+
+/* Site footer */
+.site-footer {
+    box-shadow: 0 -0.5px 0 0 var(--border);
+    margin-top: 3rem;
+    padding: 1rem 0 2rem;
+    font-size: 13px;
+    color: var(--caption);
+}
+
+.site-footer p {
+    margin-bottom: 0.25rem;
+}
+
+/* The publications section already draws a line at its bottom; use it as
+   the footer's divider instead of adding a second line and a gap. */
+.paper + .site-footer {
+    box-shadow: none;
+    margin-top: 0;
 }
 
 /* Theme toggle in the nav */
@@ -216,10 +259,14 @@ body {
 }
 
 
+body {
+    font-size: 15px;
+}
+
 .intro,
 .paper,
 .footer p {
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .footer {
@@ -228,29 +275,23 @@ body {
 }
 
 .publications {
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .intro p {
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .intro ol,
 ul,
 li {
-    font-size: 14px;
+    font-size: 15px;
     margin: 0px;
     padding: 0px;
 }
 
 .intro p a {
     font-weight: 500;
-    color: var(--accent);
-    /* text-decoration: underline; */
-}
-
-.intro li a {
-    text-decoration: underline;
 }
 
 a.icon {
@@ -306,6 +347,29 @@ blockquote.research-vision {
     list-style: none;
 }
 
+/* Older homepage updates, collapsed */
+.more-updates summary {
+    cursor: pointer;
+    color: var(--accent);
+    font-size: 14px;
+    margin-bottom: 1rem;
+    list-style-position: inside;
+}
+
+.more-updates summary:hover {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+/* Publications page: year headings */
+.year-header {
+    color: var(--accent);
+    font-weight: 600;
+    margin: 1.75rem 0 0.75rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid var(--border);
+}
+
 /* Design & data-visualization highlights grid */
 .design-grid {
     column-count: 2;
@@ -334,6 +398,11 @@ blockquote.research-vision {
     height: auto;
     display: block;
     transition: transform 0.35s ease;
+}
+
+.design-card:hover {
+    color: inherit;
+    text-decoration: none;
 }
 
 .design-card:hover .thumb img {
@@ -381,6 +450,7 @@ blockquote.research-vision {
 
 .nav-item:hover {
     color: var(--text);
+    text-decoration: none;
 }
 
 .nav-item.active {
@@ -389,7 +459,9 @@ blockquote.research-vision {
 }
 
 a:hover {
-    color: var(--link-hover);
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 2px;
 }
 
 /* project---------------------*/
@@ -692,10 +764,6 @@ figcaption,
     max-width: 30rem;
 }
 
-figcaption a {
-    text-decoration: underline;
-}
-
 .sample_text {
     margin: 3px 0 0 0;
     font-size: 0.8em;
@@ -705,16 +773,13 @@ figcaption a {
 }
 
 a {
-    color: var(--text);
+    color: var(--accent);
+    text-decoration: none;
 }
 
 .content p a {
     font-weight: 500;
     /* text-decoration: underline; */
-}
-
-.content>li>a {
-    text-decoration: underline;
 }
 
 img {
