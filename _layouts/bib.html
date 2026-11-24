@@ -23,6 +23,9 @@
     {% if entry.slides %}
         <i class="fa-solid fa-file-powerpoint"></i> <a target="_blank" href="{{ entry.slides }}"> Presentation</a> &nbsp
     {% endif %}
+    {% if entry.poster %}
+        <i class="fa-solid fa-image"></i> <a target="_blank" href="{{ entry.poster }}"> Poster</a> &nbsp
+    {% endif %}
     {% if entry.blog %}
         <i class="fa-solid fa-square-rss"></i> <a target="_blank" href="{{ entry.blog }}"> Blog</a> &nbsp
     {% endif %}
